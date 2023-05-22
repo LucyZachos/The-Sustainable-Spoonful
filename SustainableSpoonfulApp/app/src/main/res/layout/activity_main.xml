@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Login"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textSize="45dp"
+        android:textStyle="bold"
+        android:layout_margin="50dp"
+        android:gravity="center"
+        />
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/emailLabel"
+       android:layout_below="@+id/Login"
+       android:text="Email Address"
+       android:textColor="@color/white"
+       android:textSize="25dp"
+       android:padding="10dp"
+       android:layout_marginLeft="20dp"/>
+
+    <EditText
+        android:id="@+id/EmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailLabel"
+        android:hint="johnsmith@gmail.com"
+        android:textColorHint="@color/lightGrey"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:padding="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/passwordLabel"
+        android:layout_below="@+id/EmailAddress"
+        android:text="Password"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:padding="10dp"
+        android:layout_marginLeft="20dp"/>
+
+    <EditText
+        android:id="@+id/Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordLabel"
+        android:hint="* * * * * * * * * * * *"
+        android:textColorHint="@color/lightGrey"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:padding="20dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Loginbtn"
+        android:layout_below="@+id/Password"
+        android:text="Confirm"
+        android:textSize="20dp"
+        android:backgroundTint="@color/pink"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="125dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/forgotpassword"
+        android:layout_below="@+id/Login"
+        android:text="Forgot Password?"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="450dp"/>
+</RelativeLayout>
