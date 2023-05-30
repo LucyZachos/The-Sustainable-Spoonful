@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">SustainableSpoonfulApp</string>
+
+    <!--30/05/2023: Added string resources instead of using hardcoded strings for the Login Page:-->
+    <string name="login_label">Login</string>
+    <string name="email_address_label">Email Address</string>
+    <string name="password_label">Password</string>
+    <string name="confirm_label">Confirm</string>
+    <string name="forgot_password_label">Forgot Password</string>
+    <string name="email_autofill_example">johnsmith@gmail.com</string>
+    <string name="password_autofill_example">********************</string>
 </resources>
