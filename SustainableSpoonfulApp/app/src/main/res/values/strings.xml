@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">SustainableSpoonfulApp</string>
 
+    <!--16/06/2023-->
     <!--30/05/2023: Added string resources instead of using hardcoded strings for the Login Page:-->
     <string name="login_label">Login</string>
     <string name="login_email_address_label">Email Address</string>

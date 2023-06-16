@@ -65,6 +65,38 @@
         android:src="@drawable/shoprite"
         tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
+    <!--Image Button: Woolworths-->
+    <ImageButton
+        android:id="@+id/landing_woolworths_button"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="410sp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/woolworths"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    <!--Image Button: Checkers-->
+    <ImageButton
+        android:id="@+id/landing_checkers_button"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_marginStart="150sp"
+        android:layout_marginTop="410sp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/checkers"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    <!--Image Button: Spar-->
+    <ImageButton
+        android:id="@+id/landing_spar_button"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_marginStart="270sp"
+        android:layout_marginTop="410sp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/spar"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
 
 </RelativeLayout>
