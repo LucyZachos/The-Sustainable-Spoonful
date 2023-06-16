@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SustainableSpoonfulApp"
         tools:targetApi="31">
+        <!--Main Activity When Opening the Application-->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -20,6 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".RegisterActivity"/> <!--Registration Activity-->
+        <activity android:name=".LoginActivity"/> <!--Login Activity-->
+        <activity android:name=".LandingActivity"/> <!--Landing Page Activity-->
     </application>
 
 </manifest>

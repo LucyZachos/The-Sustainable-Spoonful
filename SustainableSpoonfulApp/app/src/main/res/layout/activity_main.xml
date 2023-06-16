@@ -13,22 +13,23 @@
         android:layout_width="350sp"
         android:layout_height="350sp"
         android:src="@drawable/logo"
-        android:layout_marginStart="30sp"
+        android:layout_marginStart="10sp"
         android:layout_marginTop="80sp"
-        />
+        tools:ignore="ContentDescription" />
 
 <!--Button: register button-->
     <Button
         android:id="@+id/home_register_button"
         android:layout_width="170sp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="90sp"
+        android:layout_marginTop="470sp"
+        android:backgroundTint="@color/white"
+        android:padding="15sp"
         android:text="@string/home_registerBtn"
         android:textColor="@color/black"
         android:textSize="25sp"
-        android:layout_marginTop="450sp"
-        android:layout_marginStart="125sp"
-        android:padding="15sp"
-        android:backgroundTint="@color/white" />
+        tools:ignore="TextSizeCheck" />
 
 <!--Button: login button-->
     <Button
@@ -38,8 +39,8 @@
         android:text="@string/home_loginBtn"
         android:textColor="@color/black"
         android:textSize="25sp"
-        android:layout_marginTop="540sp"
-        android:layout_marginStart="125sp"
+        android:layout_marginTop="570sp"
+        android:layout_marginStart="90sp"
         android:padding="15sp"
         android:backgroundTint="@color/white" />
 </RelativeLayout>
