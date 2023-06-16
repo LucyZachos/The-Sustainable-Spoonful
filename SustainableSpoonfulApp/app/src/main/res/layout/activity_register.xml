@@ -9,7 +9,7 @@
 
     <!--Register Heading-->
     <TextView
-        android:id="@+id/Register"
+        android:id="@+id/register_heading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -22,125 +22,140 @@
 
     <!--Name Label-->
     <TextView
-        android:layout_below="@+id/Register"
+        android:id="@+id/register_name_heading"
+        android:layout_below="@+id/register_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/nameLabel"
-        android:text="Name:"
+        android:text="@string/register_name_label"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:padding="10sp"
         android:layout_marginLeft="20sp"/>
 
+    <!--Name Text Box-->
     <EditText
-        android:id="@+id/nameInput"
+        android:id="@+id/register_name_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/nameLabel"
-        android:hint="Enter your name"
-        android:padding="10sp"
+        android:layout_below="@+id/register_name_heading"
         android:layout_marginLeft="20sp"
         android:layout_marginRight="20sp"
+        android:hint="@string/register_name_placeholder"
+        android:padding="10sp"
         android:textColor="@color/white"
-        android:textColorHint="@color/lightGrey"/>
+        android:textColorHint="@color/lightGrey"
+        tools:ignore="TextContrastCheck" />
 
+    <!--Surname Label-->
     <TextView
+        android:id="@+id/register_surname_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/surnameLabel"
-        android:layout_below="@+id/nameInput"
-        android:text="Surname:"
+        android:layout_below="@+id/register_name_text"
+        android:text="@string/register_surname_label"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:padding="10sp"
         android:layout_marginLeft="20sp"/>
 
+    <!--Surname Text Box-->
     <EditText
-        android:id="@+id/surnameInput"
+        android:id="@+id/register_surname_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/surnameLabel"
-        android:hint="Enter your surname"
-        android:padding="10sp"
+        android:layout_below="@+id/register_surname_heading"
         android:layout_marginLeft="20sp"
         android:layout_marginRight="20sp"
+        android:hint="@string/register_surname_placeholder"
+        android:padding="10sp"
         android:textColor="@color/white"
-        android:textColorHint="@color/lightGrey"/>
+        android:textColorHint="@color/lightGrey"
+        tools:ignore="TextContrastCheck" />
 
+    <!--Email Address Label-->
     <TextView
+        android:id="@+id/register_email_address_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/emailLabel"
-        android:layout_below="@+id/surnameInput"
-        android:text="Email:"
+        android:layout_below="@+id/register_surname_text"
+        android:text="@string/register_email_address_label"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:padding="10sp"
         android:layout_marginLeft="20sp"/>
 
+    <!--Email Address Text Box-->
     <EditText
-        android:id="@+id/emailInput"
+        android:id="@+id/register_email_address_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/emailLabel"
-        android:hint="Enter your email address"
-        android:padding="10sp"
+        android:layout_below="@+id/register_email_address_heading"
         android:layout_marginLeft="20sp"
         android:layout_marginRight="20sp"
+        android:hint="@string/register_email_address_placeholder"
+        android:padding="10sp"
         android:textColor="@color/white"
-        android:textColorHint="@color/lightGrey"/>
+        android:textColorHint="@color/lightGrey"
+        tools:ignore="TextContrastCheck" />
 
+    <!--Password Label-->
     <TextView
+        android:id="@+id/register_password_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/passwordLabel"
-        android:layout_below="@+id/emailInput"
-        android:text="Password:"
+        android:layout_below="@+id/register_email_address_text"
+        android:text="@string/register_password_label"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:padding="10sp"
         android:layout_marginLeft="20sp"/>
 
+    <!--Password Text Box-->
     <EditText
-        android:id="@+id/passwordInput"
+        android:id="@+id/register_password_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/passwordLabel"
-        android:hint="Enter your password"
-        android:padding="10sp"
+        android:layout_below="@+id/register_password_heading"
         android:layout_marginLeft="20sp"
         android:layout_marginRight="20sp"
+        android:hint="@string/register_password_placeholder"
+        android:padding="10sp"
         android:textColor="@color/white"
-        android:textColorHint="@color/lightGrey"/>
+        android:textColorHint="@color/lightGrey"
+        tools:ignore="TextContrastCheck" />
 
+    <!--Confirm Password Label-->
     <TextView
+        android:id="@+id/register_confirm_password_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/confirmPasswordLabel"
-        android:layout_below="@+id/passwordInput"
-        android:text="Confirm Password:"
+        android:layout_below="@+id/register_password_text"
+        android:text="@string/register_confirm_password_label"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:padding="10sp"
         android:layout_marginLeft="20sp"/>
 
+    <!--Confirm Password Text Box-->
     <EditText
-        android:id="@+id/confirmPasswordInput"
+        android:id="@+id/register_confirm_password_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/confirmPasswordLabel"
-        android:hint="Confirm your password"
-        android:padding="10sp"
+        android:layout_below="@+id/register_confirm_password_heading"
         android:layout_marginLeft="20sp"
         android:layout_marginRight="20sp"
-        android:textColorHint="@color/lightGrey"/>
+        android:hint="@string/register_confirm_password_placeholder"
+        android:padding="10sp"
+        android:textColorHint="@color/lightGrey"
+        tools:ignore="TextContrastCheck" />
 
+    <!--Confirm Button-->
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/register_confirm_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Confirmbtn"
-        android:layout_below="@+id/confirmPasswordInput"
-        android:text="CONFIRM"
+        android:layout_below="@+id/register_confirm_password_text"
+        android:text="@string/register_confirmBtn"
         android:textSize="20sp"
         android:backgroundTint="@color/pink"
         android:layout_centerHorizontal="true"

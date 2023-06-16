@@ -76,13 +76,12 @@
         android:layout_marginEnd="40sp"
         android:layout_marginBottom="10sp"
         android:padding="20sp"
-        android:textSize="20sp"
-        android:inputType="TODO" />
+        android:textSize="20sp" />
 
     <!--Confirm Button-->
     <Button
         android:id="@+id/login_confirm_button"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/login_confirmBtn"
         android:layout_below="@id/login_password_text"
@@ -91,7 +90,7 @@
         android:layout_marginTop="90sp"
         android:layout_marginEnd="135sp"
         android:layout_marginStart="135sp"
-        android:backgroundTint="@color/pink"/>
+        android:backgroundTint="@color/pink" />
 
     <!--Forgot Password Label-->
     <TextView

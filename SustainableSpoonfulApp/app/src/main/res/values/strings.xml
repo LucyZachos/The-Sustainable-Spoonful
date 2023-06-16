@@ -13,4 +13,15 @@
 
     <!--16/06/2023: Added string resources instead of using hardcoded strings for the Register Page:-->
     <string name="register_label">Register</string>
+    <string name="register_name_label">Name</string>
+    <string name="register_name_placeholder">Enter your first name</string>
+    <string name="register_surname_label">Surname</string>
+    <string name="register_surname_placeholder">Enter your surname</string>
+    <string name="register_email_address_label">Email Address</string>
+    <string name="register_email_address_placeholder">Enter your email address</string>
+    <string name="register_password_label">Password</string>
+    <string name="register_password_placeholder">Enter your password</string>
+    <string name="register_confirm_password_label">Confirm Password</string>
+    <string name="register_confirm_password_placeholder">Re-enter your password</string>
+    <string name="register_confirmBtn">Confirm</string>
 </resources>
