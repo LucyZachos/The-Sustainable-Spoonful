@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".RegisterActivity">
+
+    <!--Register Heading-->
+    <TextView
+        android:id="@+id/Register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20sp"
+        android:text="@string/register_label"
+        android:textColor="@color/white"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:layout_margin="10sp"/>
+
+    <!--Name Label-->
+    <TextView
+        android:layout_below="@+id/Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameLabel"
+        android:text="Name:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:padding="10sp"
+        android:layout_marginLeft="20sp"/>
+
+    <EditText
+        android:id="@+id/nameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameLabel"
+        android:hint="Enter your name"
+        android:padding="10sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/lightGrey"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/surnameLabel"
+        android:layout_below="@+id/nameInput"
+        android:text="Surname:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:padding="10sp"
+        android:layout_marginLeft="20sp"/>
+
+    <EditText
+        android:id="@+id/surnameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/surnameLabel"
+        android:hint="Enter your surname"
+        android:padding="10sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/lightGrey"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailLabel"
+        android:layout_below="@+id/surnameInput"
+        android:text="Email:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:padding="10sp"
+        android:layout_marginLeft="20sp"/>
+
+    <EditText
+        android:id="@+id/emailInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailLabel"
+        android:hint="Enter your email address"
+        android:padding="10sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/lightGrey"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/passwordLabel"
+        android:layout_below="@+id/emailInput"
+        android:text="Password:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:padding="10sp"
+        android:layout_marginLeft="20sp"/>
+
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordLabel"
+        android:hint="Enter your password"
+        android:padding="10sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/lightGrey"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/confirmPasswordLabel"
+        android:layout_below="@+id/passwordInput"
+        android:text="Confirm Password:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:padding="10sp"
+        android:layout_marginLeft="20sp"/>
+
+    <EditText
+        android:id="@+id/confirmPasswordInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/confirmPasswordLabel"
+        android:hint="Confirm your password"
+        android:padding="10sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:textColorHint="@color/lightGrey"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Confirmbtn"
+        android:layout_below="@+id/confirmPasswordInput"
+        android:text="CONFIRM"
+        android:textSize="20sp"
+        android:backgroundTint="@color/pink"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="50sp"
+        android:padding="20sp"/>
+</RelativeLayout>
+

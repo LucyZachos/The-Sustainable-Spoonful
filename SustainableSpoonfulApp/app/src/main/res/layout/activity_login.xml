@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".LoginActivity">
+
+    <!--Login Heading-->
+    <TextView
+        android:id="@+id/login_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="50sp"
+        android:layout_marginEnd="50sp"
+        android:layout_marginBottom="50sp"
+        android:gravity="center"
+        android:text="@string/login_label"
+        android:textColor="@color/white"
+        android:textSize="55sp"
+        android:textStyle="bold" />
+
+    <!--Email Label-->
+    <TextView
+        android:id="@+id/login_email_address_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_heading"
+        android:text="@string/login_email_address_label"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:padding="10sp"
+        android:layout_marginStart="40sp"/>
+
+    <!--Email Text Box-->
+    <EditText
+        android:id="@+id/login_email_address_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_email_address_heading"
+        android:layout_marginTop="2sp"
+        android:layout_marginStart="40sp"
+        android:layout_marginEnd="40sp"
+        android:layout_marginBottom="10sp"
+        android:hint="@string/login_email_autofill_example"
+        android:padding="20sp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/lightGrey"
+        android:textSize="20sp"/>
+
+    <!--Password Label-->
+    <TextView
+        android:id="@+id/login_password_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_email_address_text"
+        android:text="@string/login_password_label"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:padding="10sp"
+        android:layout_marginStart="40sp" />
+
+    <!--Password Text Box-->
+    <EditText
+        android:id="@+id/login_password_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_password_heading"
+        android:hint="@string/login_password_autofill_example"
+        android:textColorHint="@color/lightGrey"
+        android:textColor="@color/white"
+        android:layout_marginTop="2sp"
+        android:layout_marginStart="40sp"
+        android:layout_marginEnd="40sp"
+        android:layout_marginBottom="10sp"
+        android:padding="20sp"
+        android:textSize="20sp"
+        android:inputType="TODO" />
+
+    <!--Confirm Button-->
+    <Button
+        android:id="@+id/login_confirm_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login_confirmBtn"
+        android:layout_below="@id/login_password_text"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="90sp"
+        android:layout_marginEnd="135sp"
+        android:layout_marginStart="135sp"
+        android:backgroundTint="@color/pink"/>
+
+    <!--Forgot Password Label-->
+    <TextView
+        android:id="@+id/login_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_heading"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="450sp"
+        android:layout_marginTop="410sp"
+        android:layout_marginEnd="450sp"
+        android:layout_marginBottom="450sp"
+        android:text="@string/login_forgot_password_label"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+</RelativeLayout>
