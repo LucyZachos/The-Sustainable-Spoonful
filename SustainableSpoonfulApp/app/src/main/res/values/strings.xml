@@ -7,6 +7,7 @@
     <string name="password_label">Password</string>
     <string name="confirm_label">Confirm</string>
     <string name="forgot_password_label">Forgot Password</string>
-    <string name="email_autofill_example">johnsmith@gmail.com</string>
+    <string name="email_autofill_example">example@gmail.com</string>
     <string name="password_autofill_example">********************</string>
+    <string name="confirmBtn">Confirm</string>
 </resources>
