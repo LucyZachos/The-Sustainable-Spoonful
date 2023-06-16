@@ -8,7 +8,8 @@ import android.widget.Button;
 import android.database.sqlite.SQLiteDatabase;
 import android.widget.EditText;
 import android.widget.Toast;
-
+import android.content.Intent;
+import android.database.Cursor;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -50,33 +51,63 @@ public class RegisterActivity extends AppCompatActivity {
         String password = passwordEditText.getText().toString();
         String confirmPassword = confirmPasswordEditText.getText().toString();
 
+        //Check if any of the input fields are empty before inserting the customer details:
+        if(name.isEmpty()||surname.isEmpty()||email.isEmpty()||password.isEmpty()||confirmPassword.isEmpty()){
+            Toast.makeText(RegisterActivity.this, "Please fill out all fields in this form.", Toast.LENGTH_SHORT).show();
+            return; //Exit the method early
+        }
+
         //If the password and confirm password match insert the details into the customer table:
         if(password.equals(confirmPassword)){
             //Getting a writable database:
             SQLiteDatabase db = databaseHelper.getWritableDatabase();
 
-            ContentValues values = new ContentValues();
-            values.put(DatabaseHelper.COLUMN_NAME, name);
-            values.put(DatabaseHelper.COLUMN_SURNAME, surname);
-            values.put(DatabaseHelper.COLUMN_EMAIL,email);
-            values.put(DatabaseHelper.COLUMN_PASSWORD, password);
+            //Checking if the email address already exists in the customer table:
+            boolean emailExists = checkEmailExists(email,db);
+            if(emailExists){
+                Toast.makeText(RegisterActivity.this, "This email address already exists! Please try again.", Toast.LENGTH_SHORT).show();
+            }else{ //Does not exist so insert details into the customer table:
+                ContentValues values = new ContentValues();
+                values.put(DatabaseHelper.COLUMN_NAME, name);
+                values.put(DatabaseHelper.COLUMN_SURNAME, surname);
+                values.put(DatabaseHelper.COLUMN_EMAIL,email);
+                values.put(DatabaseHelper.COLUMN_PASSWORD, password);
 
-            long rowID = db.insert(DatabaseHelper.TABLE_NAME,null,values);
+                long rowID = db.insert(DatabaseHelper.TABLE_NAME,null,values);
 
-            //Closing the database after inserting the customer's details:
-            db.close();
+                //Closing the database after inserting the customer's details:
+                db.close();
 
-            //If a row is not equal to one, display a success message:
-            if(rowID != -1){
-                Toast.makeText(RegisterActivity.this, "Registration was successful!", Toast.LENGTH_SHORT).show();
-                //Redirect to the login page:
+                //If the row ID is not equal to minus one, display a success message:
+                if(rowID != -1){
+                    Toast.makeText(RegisterActivity.this, "Registration was successful!", Toast.LENGTH_SHORT).show();
+                    //Redirect to the login page:
+                    startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                    finish(); //Finishing the current activity so that customers' cannot go back to it when pressing the back button
 
-            }else{
-                Toast.makeText(RegisterActivity.this, "Registration failed!", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(RegisterActivity.this, "Registration failed! Please try again.", Toast.LENGTH_SHORT).show();
+                }
             }
-
         }else{ //Passwords do not match, display an error message:
-            Toast.makeText(RegisterActivity.this, "The passwords entered do not match!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(RegisterActivity.this, "The passwords entered do not match! Please try again.", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private boolean checkEmailExists(String email, SQLiteDatabase db){
+        //Define which column to retrieve from the database:
+        String[] projection = {databaseHelper.getColumnEmail()};
+        //Select any email addresses that are in the customer table that match the email address entered:
+        String selection = databaseHelper.getColumnEmail() + " = ?";
+        //Specify the argument for the query, this will be email:
+        String[] selectionArgs = {email};
+        //Query the customer table for any matching records:
+        Cursor cursor = db.query(DatabaseHelper.TABLE_NAME, projection, selection, selectionArgs, null, null, null);
+        //Checking if any records were found/records greater than 0:
+        boolean exists = cursor.getCount()>0;
+        //Close the cursor so that associated resources can be released:
+        cursor.close();
+        //Return the result (if the email exists or not):
+        return exists;
     }
 }
