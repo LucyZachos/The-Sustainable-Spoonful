@@ -12,13 +12,16 @@
         android:id="@+id/register_heading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="50sp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50sp"
         android:gravity="center"
-        android:layout_marginTop="20sp"
         android:text="@string/register_label"
         android:textColor="@color/white"
-        android:textSize="45sp"
-        android:textStyle="bold"
-        android:layout_margin="10sp"/>
+        android:textSize="55sp"
+        android:textStyle="bold" />
 
     <!--Name Label-->
     <TextView
@@ -30,21 +33,21 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         android:padding="10sp"
-        android:layout_marginLeft="20sp"/>
+        android:layout_marginStart="40sp"/>
 
     <!--Name Text Box-->
     <EditText
         android:id="@+id/register_name_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="400sp"
+        android:layout_height="48sp"
         android:layout_below="@+id/register_name_heading"
-        android:layout_marginLeft="20sp"
-        android:layout_marginRight="20sp"
+        android:layout_marginLeft="40sp"
+        android:layout_marginRight="40sp"
         android:hint="@string/register_name_placeholder"
         android:padding="10sp"
         android:textColor="@color/white"
         android:textColorHint="@color/lightGrey"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="Autofill,TextContrastCheck,TextFields" />
 
     <!--Surname Label-->
     <TextView
@@ -56,21 +59,21 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         android:padding="10sp"
-        android:layout_marginLeft="20sp"/>
+        android:layout_marginStart="40sp"/>
 
     <!--Surname Text Box-->
     <EditText
         android:id="@+id/register_surname_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="400sp"
+        android:layout_height="48sp"
         android:layout_below="@+id/register_surname_heading"
-        android:layout_marginLeft="20sp"
-        android:layout_marginRight="20sp"
+        android:layout_marginLeft="40sp"
+        android:layout_marginRight="40sp"
         android:hint="@string/register_surname_placeholder"
         android:padding="10sp"
         android:textColor="@color/white"
         android:textColorHint="@color/lightGrey"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="Autofill,TextContrastCheck,TextFields" />
 
     <!--Email Address Label-->
     <TextView
@@ -82,21 +85,21 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         android:padding="10sp"
-        android:layout_marginLeft="20sp"/>
+        android:layout_marginStart="40sp"/>
 
     <!--Email Address Text Box-->
     <EditText
         android:id="@+id/register_email_address_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="400sp"
+        android:layout_height="48sp"
         android:layout_below="@+id/register_email_address_heading"
-        android:layout_marginLeft="20sp"
-        android:layout_marginRight="20sp"
+        android:layout_marginLeft="40sp"
+        android:layout_marginRight="40sp"
         android:hint="@string/register_email_address_placeholder"
         android:padding="10sp"
         android:textColor="@color/white"
         android:textColorHint="@color/lightGrey"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="Autofill,TextContrastCheck,TextFields" />
 
     <!--Password Label-->
     <TextView
@@ -108,21 +111,21 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         android:padding="10sp"
-        android:layout_marginLeft="20sp"/>
+        android:layout_marginStart="40sp"/>
 
     <!--Password Text Box-->
     <EditText
         android:id="@+id/register_password_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="400sp"
+        android:layout_height="48sp"
         android:layout_below="@+id/register_password_heading"
-        android:layout_marginLeft="20sp"
-        android:layout_marginRight="20sp"
+        android:layout_marginLeft="40sp"
+        android:layout_marginRight="40sp"
         android:hint="@string/register_password_placeholder"
         android:padding="10sp"
         android:textColor="@color/white"
         android:textColorHint="@color/lightGrey"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="Autofill,TextContrastCheck,TextFields" />
 
     <!--Confirm Password Label-->
     <TextView
@@ -134,23 +137,23 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         android:padding="10sp"
-        android:layout_marginLeft="20sp"/>
+        android:layout_marginStart="40sp"/>
 
     <!--Confirm Password Text Box-->
     <EditText
         android:id="@+id/register_confirm_password_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="400sp"
+        android:layout_height="48sp"
         android:layout_below="@+id/register_confirm_password_heading"
-        android:layout_marginLeft="20sp"
-        android:layout_marginRight="20sp"
+        android:layout_marginLeft="40sp"
+        android:layout_marginRight="40sp"
         android:hint="@string/register_confirm_password_placeholder"
         android:padding="10sp"
         android:textColorHint="@color/lightGrey"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="Autofill,TextContrastCheck,TextFields" />
 
     <!--Confirm Button-->
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/register_confirm_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -159,7 +162,7 @@
         android:textSize="20sp"
         android:backgroundTint="@color/pink"
         android:layout_centerHorizontal="true"
-        android:layout_margin="50sp"
-        android:padding="20sp"/>
+        android:layout_margin="40sp"
+        android:padding="20sp" />
 </RelativeLayout>
 

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LandingActivity">
+
+    <!-- Main heading: The Sustainable Spoonful-->
+    <TextView
+        android:id="@+id/landing_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/landing_main_heading"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginTop="55sp"
+        />
+
+    <!--Sub heading: Proudly in partnership with:-->
+    <TextView
+        android:id="@+id/landing_subheading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/landing_subheading"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="250sp"
+        android:layout_marginStart="70sp"
+        android:gravity="center"
+        />
+
+    <!--Image Button: PicknPay -->
+    <ImageButton
+        android:id="@+id/landing_picknpay_button"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="300sp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/picknpay"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    <!--Image Button: Food Lover's Market -->
+    <ImageButton
+        android:id="@+id/landing_foodloversmarket_button"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_marginStart="150sp"
+        android:layout_marginTop="300sp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/foodloversmarket"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    <!--Image Button: Shoprite -->
+    <ImageButton
+        android:id="@+id/landing_shoprite_button"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_marginStart="270sp"
+        android:layout_marginTop="300sp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/shoprite"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+
+
+</RelativeLayout>
