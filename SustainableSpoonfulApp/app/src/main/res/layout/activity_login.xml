@@ -87,12 +87,12 @@
         android:layout_height="wrap_content"
         android:text="@string/login_confirmBtn"
         android:layout_below="@id/login_password_text"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:layout_marginTop="90sp"
         android:layout_marginStart="100sp"
 
-        android:backgroundTint="@color/pink"
+        android:backgroundTint="@color/white"
         android:padding="20sp"/>
 
     <!--Forgot Password Label-->

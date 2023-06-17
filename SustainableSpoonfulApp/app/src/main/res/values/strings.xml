@@ -33,4 +33,8 @@
     <string name="landing_main_heading">The Sustainable Spoonful</string>
     <string name="landing_subheading">Proudly in partnership with:</string>
 
+    <!--17/06/2023: Added string resources instead of using hardcoded strings for the Landing Page-->
+    <string name="discount_main_heading">Discounts</string>
+    <string name="discount_subheading">Available Stores:</string>
+
 </resources>
