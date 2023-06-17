@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/plain_background"
     tools:context=".LandingActivity">
 
     <!-- Main heading: The Sustainable Spoonful-->
@@ -27,8 +28,8 @@
         android:text="@string/landing_subheading"
         android:textSize="24sp"
         android:textColor="@color/black"
-        android:layout_marginTop="250sp"
-        android:layout_marginStart="70sp"
+        android:layout_marginTop="260sp"
+        android:layout_marginStart="20sp"
         android:gravity="center"
         />
 
@@ -37,8 +38,8 @@
         android:id="@+id/landing_picknpay_button"
         android:layout_width="100sp"
         android:layout_height="100sp"
-        android:layout_marginStart="30sp"
-        android:layout_marginTop="300sp"
+        android:layout_marginStart="10sp"
+        android:layout_marginTop="350sp"
         android:scaleType="fitCenter"
         android:src="@drawable/picknpay"
         tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
@@ -48,8 +49,8 @@
         android:id="@+id/landing_foodloversmarket_button"
         android:layout_width="100sp"
         android:layout_height="100sp"
-        android:layout_marginStart="150sp"
-        android:layout_marginTop="300sp"
+        android:layout_marginStart="120sp"
+        android:layout_marginTop="350sp"
         android:scaleType="fitCenter"
         android:src="@drawable/foodloversmarket"
         tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
@@ -59,8 +60,8 @@
         android:id="@+id/landing_shoprite_button"
         android:layout_width="100sp"
         android:layout_height="100sp"
-        android:layout_marginStart="270sp"
-        android:layout_marginTop="300sp"
+        android:layout_marginStart="230sp"
+        android:layout_marginTop="350sp"
         android:scaleType="fitCenter"
         android:src="@drawable/shoprite"
         tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
@@ -70,8 +71,8 @@
         android:id="@+id/landing_woolworths_button"
         android:layout_width="100sp"
         android:layout_height="100sp"
-        android:layout_marginStart="30sp"
-        android:layout_marginTop="410sp"
+        android:layout_marginStart="10sp"
+        android:layout_marginTop="460sp"
         android:scaleType="fitCenter"
         android:src="@drawable/woolworths"
         tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
@@ -81,19 +82,19 @@
         android:id="@+id/landing_checkers_button"
         android:layout_width="100sp"
         android:layout_height="100sp"
-        android:layout_marginStart="150sp"
-        android:layout_marginTop="410sp"
+        android:layout_marginStart="120sp"
+        android:layout_marginTop="460sp"
         android:scaleType="fitCenter"
         android:src="@drawable/checkers"
-        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck,ImageContrastCheck" />
 
     <!--Image Button: Spar-->
     <ImageButton
         android:id="@+id/landing_spar_button"
         android:layout_width="100sp"
         android:layout_height="100sp"
-        android:layout_marginStart="270sp"
-        android:layout_marginTop="410sp"
+        android:layout_marginStart="230sp"
+        android:layout_marginTop="460sp"
         android:scaleType="fitCenter"
         android:src="@drawable/spar"
         tools:ignore="ContentDescription,SpeakableTextPresentCheck" />

@@ -49,4 +49,9 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         return COLUMN_EMAIL;
     }
 
+    //Use a get method for the password column:
+    public String getColumnPassword(){
+        return COLUMN_PASSWORD;
+    }
+
 }

@@ -103,7 +103,7 @@
         android:layout_below="@+id/login_heading"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="450sp"
-        android:layout_marginTop="450sp"
+        android:layout_marginTop="460sp"
         android:layout_marginEnd="450sp"
         android:layout_marginBottom="450sp"
         android:text="@string/login_forgot_password_label"
