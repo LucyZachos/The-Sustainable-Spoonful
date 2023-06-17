@@ -48,8 +48,8 @@ public class RegisterActivity extends AppCompatActivity {
         String name = nameEditText.getText().toString().trim();
         String surname = surnameEditText.getText().toString().trim();
         String email = emailEditText.getText().toString().trim();
-        String password = passwordEditText.getText().toString();
-        String confirmPassword = confirmPasswordEditText.getText().toString();
+        String password = passwordEditText.getText().toString().trim();
+        String confirmPassword = confirmPasswordEditText.getText().toString().trim();
 
         //Check if any of the input fields are empty before inserting the customer details:
         if(name.isEmpty()||surname.isEmpty()||email.isEmpty()||password.isEmpty()||confirmPassword.isEmpty()){
