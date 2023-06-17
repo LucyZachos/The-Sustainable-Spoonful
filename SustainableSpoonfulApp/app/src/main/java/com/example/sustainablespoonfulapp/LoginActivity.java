@@ -42,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void login(){
         //Getting the email and password that the customer has entered:
-        String email = emailEditText.getText().toString();
+        String email = emailEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString();
 
         //Check if any of the input fields are empty before logging in the customer:

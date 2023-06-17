@@ -45,9 +45,9 @@ public class RegisterActivity extends AppCompatActivity {
     //Function to insert customer details into the customer table:
     private void insertCustomer(){
         //Getting all of the data that was input in the form:
-        String name = nameEditText.getText().toString();
-        String surname = surnameEditText.getText().toString();
-        String email = emailEditText.getText().toString();
+        String name = nameEditText.getText().toString().trim();
+        String surname = surnameEditText.getText().toString().trim();
+        String email = emailEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString();
         String confirmPassword = confirmPasswordEditText.getText().toString();
 

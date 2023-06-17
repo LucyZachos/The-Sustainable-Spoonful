@@ -43,7 +43,7 @@ public class DiscountActivity extends AppCompatActivity {
         cardFoodLoversMarket.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showToast("Food Loavers Market Clicked");
+                showToast("Food Lovers Market Clicked");
             }
         });
     }
