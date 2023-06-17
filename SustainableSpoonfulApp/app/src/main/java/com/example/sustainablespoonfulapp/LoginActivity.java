@@ -79,7 +79,7 @@ public class LoginActivity extends AppCompatActivity {
         //Specify the arguments for the query, this will be email and password:
         String[] selectionArgs = {email, password};
         //Query the customer table for any matching records:
-        Cursor cursor = db.query(DatabaseHelper.TABLE_NAME, projection, selection, selectionArgs, null, null, null);
+        Cursor cursor = db.query(DatabaseHelper.TABLE_NAME_CUSTOMER, projection, selection, selectionArgs, null, null, null);
         //Checking if any records were found/records greater than 0:
         boolean exists = cursor.getCount()>0;
         //Close the cursor so that associated resources can be released:

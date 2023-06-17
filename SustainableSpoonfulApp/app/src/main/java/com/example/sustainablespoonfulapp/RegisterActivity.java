@@ -68,12 +68,12 @@ public class RegisterActivity extends AppCompatActivity {
                 Toast.makeText(RegisterActivity.this, "This email address already exists! Please try again.", Toast.LENGTH_SHORT).show();
             }else{ //Does not exist so insert details into the customer table:
                 ContentValues values = new ContentValues();
-                values.put(DatabaseHelper.COLUMN_NAME, name);
-                values.put(DatabaseHelper.COLUMN_SURNAME, surname);
-                values.put(DatabaseHelper.COLUMN_EMAIL,email);
-                values.put(DatabaseHelper.COLUMN_PASSWORD, password);
+                values.put(DatabaseHelper.COLUMN_CUSTOMER_NAME, name);
+                values.put(DatabaseHelper.COLUMN_CUSTOMER_SURNAME, surname);
+                values.put(DatabaseHelper.COLUMN_CUSTOMER_EMAIL,email);
+                values.put(DatabaseHelper.COLUMN_CUSTOMER_PASSWORD, password);
 
-                long rowID = db.insert(DatabaseHelper.TABLE_NAME,null,values);
+                long rowID = db.insert(DatabaseHelper.TABLE_NAME_CUSTOMER,null,values);
 
                 //Closing the database after inserting the customer's details:
                 db.close();
@@ -102,7 +102,7 @@ public class RegisterActivity extends AppCompatActivity {
         //Specify the argument for the query, this will be email:
         String[] selectionArgs = {email};
         //Query the customer table for any matching records:
-        Cursor cursor = db.query(DatabaseHelper.TABLE_NAME, projection, selection, selectionArgs, null, null, null);
+        Cursor cursor = db.query(DatabaseHelper.TABLE_NAME_CUSTOMER, projection, selection, selectionArgs, null, null, null);
         //Checking if any records were found/records greater than 0:
         boolean exists = cursor.getCount()>0;
         //Close the cursor so that associated resources can be released:
