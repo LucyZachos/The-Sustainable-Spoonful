@@ -2,7 +2,9 @@ package com.example.sustainablespoonfulapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 
@@ -12,6 +14,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Checking if the customer is logged in:
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn",false); //Set is logged in to false:
+
+        //If false redirect to the landing page:
+        if(isLoggedIn) {
+            startActivity(new Intent(MainActivity.this, LandingActivity.class));
+            finish();
+        }
 
         /*Navigating to the Registration Page After Clicking the Register Button*/
         Button registerButton=findViewById(R.id.home_register_button);

@@ -24,6 +24,14 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     public static final String COLUMN_RETAILER_NAME = "retailer_name";
     public static final String COLUMN_RETAILER_ADDRESS = "address";
 
+    //Discounted Products Table Constants:
+    public static final String TABLE_NAME_DISCOUNTED_PRODUCTS = "discounted_products";
+    public static final String COLUMN_DISCOUNT_ID = "discount_id";
+    public static final String COLUMN_DISCOUNT_CODE = "discount_code";
+    public static final String COLUMN_DISCOUNT_RETAILER_ID = "retailer_id";
+    public static final String COLUMN_DISCOUNT_PRODUCT_NAME = "product_name";
+    public static final String COLUMN_DISCOUNT_PERCENTAGE = "discount_percentage";
+
     public DatabaseHelper(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -46,12 +54,25 @@ public class DatabaseHelper extends SQLiteOpenHelper{
                 COLUMN_RETAILER_NAME + " TEXT," +
                 COLUMN_RETAILER_ADDRESS + " TEXT)";
         db.execSQL(createRetailerTable);
+
+        //DISCOUNTED PRODUCTS TABLE:
+        String createDiscountedProductsTable = "CREATE TABLE " + TABLE_NAME_DISCOUNTED_PRODUCTS + " (" +
+                COLUMN_DISCOUNT_ID + " INTEGER PRIMARY KEY," +
+                COLUMN_DISCOUNT_CODE + " TEXT," +
+                COLUMN_DISCOUNT_PERCENTAGE + " TEXT," +
+                COLUMN_DISCOUNT_PRODUCT_NAME + " TEXT," +
+                COLUMN_DISCOUNT_RETAILER_ID + " INTEGER," +
+                "FOREIGN KEY (" + COLUMN_DISCOUNT_RETAILER_ID + ") REFERENCES " +
+                TABLE_NAME_RETAILER + "(" + COLUMN_RETAILER_ID + "))";
+        db.execSQL(createDiscountedProductsTable);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
         //Upgrade the database if necessary:
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME_CUSTOMER);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME_RETAILER);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME_DISCOUNTED_PRODUCTS);
         onCreate(db);
     }
 

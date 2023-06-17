@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -57,6 +59,13 @@ public class LoginActivity extends AppCompatActivity {
 
         //If a record was found and it matches/login was successful display a message and redirect to the landing page:
         if(loginSuccess){
+            //Store the customer details in Shared Preferences:
+            SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("email",email); //Store the customers email:
+            editor.putBoolean("isLoggedIn",true); //Store the customers' login status:
+            editor.apply();
+
             //Displaying a success message:
             Toast.makeText(LoginActivity.this, "Logged in successfully!", Toast.LENGTH_SHORT).show();
             //Redirecting to the Landing Page:
