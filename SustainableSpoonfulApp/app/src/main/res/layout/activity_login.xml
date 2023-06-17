@@ -29,10 +29,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/login_heading"
         android:text="@string/login_email_address_label"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="25sp"
         android:padding="10sp"
-        android:layout_marginStart="40sp"/>
+        android:layout_marginStart="40sp"
+        />
 
     <!--Email Text Box-->
     <EditText
@@ -46,10 +47,11 @@
         android:layout_marginBottom="10sp"
         android:hint="@string/login_email_autofill_example"
         android:padding="20sp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/lightGrey"
+        android:textColor="@color/black"
+        android:textColorHint="@color/white"
         android:textSize="20sp"
-        tools:ignore="Autofill,TextContrastCheck,TextFields" />
+        tools:ignore="Autofill,TextContrastCheck,TextFields"
+        android:background="@drawable/input_border"/>
 
     <!--Password Label-->
     <TextView
@@ -58,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/login_email_address_text"
         android:text="@string/login_password_label"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="25sp"
         android:padding="10sp"
         android:layout_marginStart="40sp" />
@@ -75,10 +77,11 @@
         android:layout_marginBottom="10sp"
         android:hint="@string/login_password_autofill_example"
         android:padding="20sp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/lightGrey"
+        android:textColor="@color/black"
+        android:textColorHint="@color/white"
         android:textSize="20sp"
-        tools:ignore="Autofill,TextContrastCheck,TextFields" />
+        tools:ignore="Autofill,TextContrastCheck,TextFields"
+        android:background="@drawable/input_border"/>
 
     <!--Confirm Button-->
     <Button
