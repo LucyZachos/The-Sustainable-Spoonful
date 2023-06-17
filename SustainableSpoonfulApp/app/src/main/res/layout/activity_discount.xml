@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/blue"
     tools:context=".DiscountActivity">
 
     <!--Discounts Heading-->
@@ -37,18 +37,164 @@
         android:textSize="30sp"
         android:textStyle="bold" />
 
-    <!--Box 1: Checkers availability-->
-    <TextView
-        android:id="@+id/discounts_box_checkers"
+    <!--Cards: Contain store image and available discounts -->
+
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50sp"
-        android:layout_marginTop="150sp"
-        android:layout_marginEnd="50sp"
-        android:layout_marginBottom="50sp"
-        android:gravity="center"
-        android:text="@string/discount_subheading"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent"
+        android:layout_below="@+id/discounts_subheading"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="20sp"
+        android:columnCount="2"
+        android:rowCount="3">
+        <!--Card 1: Pick n Pay-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardPicknpay"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            app:cardCornerRadius="8sp"
+            app:cardElevation="8sp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="90sp"
+                    android:layout_height="90sp"
+                    android:src="@drawable/picknpay" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/picknpay_discounts_card"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--Card 2: Checkers-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardCheckers"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            app:cardCornerRadius="8sp"
+            app:cardElevation="8sp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/checkers_card_image"
+                    android:layout_width="90sp"
+                    android:layout_height="90sp"
+                    android:src="@drawable/checkers" />
+
+                <TextView
+                    android:id="@+id/checkers_card_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkers_discounts_card"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--Card 3: Woolworths-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardWoolworths"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            app:cardCornerRadius="8sp"
+            app:cardElevation="8sp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/woolworths_card_image"
+                    android:layout_width="90sp"
+                    android:layout_height="90sp"
+                    android:src="@drawable/woolworths" />
+
+                <TextView
+                    android:id="@+id/woolworths_card_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/woolworths_discounts_card"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--Card 4: Food Lovers Market-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardFoodLoversMarket"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            app:cardCornerRadius="8sp"
+            app:cardElevation="8sp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/foodloversmarket_card_image"
+                    android:layout_width="90sp"
+                    android:layout_height="90sp"
+                    android:src="@drawable/foodloversmarket" />
+
+                <TextView
+                    android:id="@+id/foodloversmarket_card_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/foodloversmarket_discounts_card"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+
 </RelativeLayout>

@@ -33,8 +33,14 @@
     <string name="landing_main_heading">The Sustainable Spoonful</string>
     <string name="landing_subheading">Proudly in partnership with:</string>
 
-    <!--17/06/2023: Added string resources instead of using hardcoded strings for the Landing Page-->
+    <!--17/06/2023: Added string resources instead of using hardcoded strings for the Discounts Page-->
     <string name="discount_main_heading">Discounts</string>
     <string name="discount_subheading">Available Stores:</string>
+
+    <!--17/06/2023: Added string resources instead of using hardcoded strings for the discount cards-->
+    <string name="picknpay_discounts_card">5 Available</string>
+    <string name="foodloversmarket_discounts_card">3 Available</string>
+    <string name="woolworths_discounts_card">5 Available</string>
+    <string name="checkers_discounts_card">3 Available</string>
 
 </resources>
