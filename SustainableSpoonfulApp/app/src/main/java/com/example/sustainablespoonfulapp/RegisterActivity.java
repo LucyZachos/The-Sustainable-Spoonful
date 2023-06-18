@@ -21,7 +21,7 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_register); //Create the register page:
 
         //Creating an instance of the DatabaseHelper class:
         databaseHelper = new DatabaseHelper(this);
@@ -53,8 +53,9 @@ public class RegisterActivity extends AppCompatActivity {
 
         //Check if any of the input fields are empty before inserting the customer details:
         if(name.isEmpty()||surname.isEmpty()||email.isEmpty()||password.isEmpty()||confirmPassword.isEmpty()){
+            //Display a message prompting customers to enter their details on the page:
             Toast.makeText(RegisterActivity.this, "Please fill out all fields in this form.", Toast.LENGTH_SHORT).show();
-            return; //Exit the method early
+            return; //Exiting the method early:
         }
 
         //If the password and confirm password match insert the details into the customer table:
@@ -64,6 +65,7 @@ public class RegisterActivity extends AppCompatActivity {
 
             //Checking if the email address already exists in the customer table:
             boolean emailExists = checkEmailExists(email,db);
+
             if(emailExists){
                 Toast.makeText(RegisterActivity.this, "This email address already exists! Please try again.", Toast.LENGTH_SHORT).show();
             }else{ //Does not exist so insert details into the customer table:
@@ -80,16 +82,17 @@ public class RegisterActivity extends AppCompatActivity {
 
                 //If the row ID is not equal to minus one, display a success message:
                 if(rowID != -1){
+                    //Display a message to the customer notifying them that their registration was successful:
                     Toast.makeText(RegisterActivity.this, "Registration was successful!", Toast.LENGTH_SHORT).show();
-                    //Redirect to the login page:
-                    startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
-                    finish(); //Finishing the current activity so that customers' cannot go back to it when pressing the back button
+                    startActivity(new Intent(RegisterActivity.this, LoginActivity.class)); //Redirect the customer to the login page:
+                    finish(); //Finishing the current activity so that customers' cannot go back to it when pressing the back button:
 
                 }else{
+                    //Displaying a message at the bottom notifying the customer that their registration has failed:
                     Toast.makeText(RegisterActivity.this, "Registration failed! Please try again.", Toast.LENGTH_SHORT).show();
                 }
             }
-        }else{ //Passwords do not match, display an error message:
+        }else{ //Passwords do not match, display a message at the bottom notifying the customer that their passwords do not match:
             Toast.makeText(RegisterActivity.this, "The passwords entered do not match! Please try again.", Toast.LENGTH_SHORT).show();
         }
     }

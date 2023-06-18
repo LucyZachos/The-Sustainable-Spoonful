@@ -85,5 +85,4 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     public String getColumnPassword(){
         return COLUMN_CUSTOMER_PASSWORD;
     }
-
 }

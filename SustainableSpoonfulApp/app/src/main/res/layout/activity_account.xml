@@ -7,6 +7,21 @@
     android:background="@drawable/plain_background"
     tools:context=".AccountActivity">
 
+    <!--Button: logout button-->
+    <Button
+        android:id="@+id/account_logout_button"
+        android:layout_width="170sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90sp"
+        android:layout_marginTop="470sp"
+        android:backgroundTint="@color/menu_blue"
+        android:padding="15sp"
+        android:text="@string/account_logoutBtn"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        tools:ignore="TextSizeCheck" />
+
+
     <!--Bottom Navigation Bar:-->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav_bar"

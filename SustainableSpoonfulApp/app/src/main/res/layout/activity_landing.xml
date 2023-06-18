@@ -42,6 +42,8 @@
         android:layout_marginTop="350sp"
         android:scaleType="fitCenter"
         android:src="@drawable/picknpay"
+        android:background="@drawable/image_button_border"
+        android:padding="4dp"
         tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
     <!--Image Button: Food Lover's Market -->
@@ -53,6 +55,8 @@
         android:layout_marginTop="350sp"
         android:scaleType="fitCenter"
         android:src="@drawable/foodloversmarket"
+        android:background="@drawable/image_button_border"
+        android:padding="4dp"
         tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
     <!--Image Button: Shoprite -->
@@ -64,6 +68,8 @@
         android:layout_marginTop="350sp"
         android:scaleType="fitCenter"
         android:src="@drawable/shoprite"
+        android:background="@drawable/image_button_border"
+        android:padding="4dp"
         tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
     <!--Image Button: Woolworths-->
@@ -75,6 +81,8 @@
         android:layout_marginTop="460sp"
         android:scaleType="fitCenter"
         android:src="@drawable/woolworths"
+        android:background="@drawable/image_button_border"
+        android:padding="4dp"
         tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
     <!--Image Button: Checkers-->
@@ -86,6 +94,8 @@
         android:layout_marginTop="460sp"
         android:scaleType="fitCenter"
         android:src="@drawable/checkers"
+        android:background="@drawable/image_button_border"
+        android:padding="4dp"
         tools:ignore="ContentDescription,SpeakableTextPresentCheck,ImageContrastCheck" />
 
     <!--Image Button: Spar-->
@@ -97,6 +107,8 @@
         android:layout_marginTop="460sp"
         android:scaleType="fitCenter"
         android:src="@drawable/spar"
+        android:background="@drawable/image_button_border"
+        android:padding="4dp"
         tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
     <!--Bottom Navigation Bar:-->
@@ -108,5 +120,6 @@
         app:itemTextColor="@drawable/menu_bar_on_select"
         app:itemIconTint="@drawable/menu_bar_on_select"
         android:background="@drawable/menu_bar_shape"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        tools:ignore="VisualLintBottomNav" />
 </RelativeLayout>
