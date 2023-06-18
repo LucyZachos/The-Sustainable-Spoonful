@@ -21,8 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         //If the customer is logged in, redirect to the home page:
         if(isLoggedIn) {
-            Intent intent = new Intent(MainActivity.this, MainActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            Intent intent = new Intent(MainActivity.this, LandingActivity.class);
             startActivity(intent);
             finish();
         }
