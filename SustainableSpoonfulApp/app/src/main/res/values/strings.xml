@@ -69,9 +69,16 @@
 
     <!--18/06/2023: Labels for products-->
     <string name="BlueRibbon_Bread"> White Bread Loaf</string>
-    <string name="Oranges">Oranges 1Kg </string>
-    <string name="Oil">SunfLower Oil 1L</string>
-    <string name="Milk">Full Cream Milk 2L</string>
+    <string name="Oranges">Oranges 1 Kg </string>
+    <string name="Oil">Sunflower Oil 1 L</string>
+    <string name="Milk">Full Cream Milk 2 L</string>
     <string name="Bananas">Pack of Bananas</string>
-    <string name="Apples">Apples 1.5Kg</string>
+    <string name="Apples">Apples 1.5 Kg</string>
+    <string name="Sandwich">Ultimate Sandwich</string>
+    <string name="Onions">Onions 1 Kg</string>
+    <string name="AcePap">Ace Pap 1 Kg</string>
+    <string name="BrownRice">Brown Rice 1 Kg</string>
+    <string name="Potatoes">UTD Potatoes 1 Kg</string>
+    <string name="Cake">StrawChoc Cake</string>
+    <string name="Rolls">Bread Rolls x6</string>
 </resources>

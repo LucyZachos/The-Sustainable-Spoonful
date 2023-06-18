@@ -15,19 +15,18 @@ import androidx.cardview.widget.CardView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-
-public class WoolworthsProductsActivity extends AppCompatActivity {
-
+public class FoodLoversProductsActivity extends AppCompatActivity {
     BottomNavigationView bottom_nav_bar;
 
-    CardView cardMilk;
-    CardView cardBananas;
-    CardView cardApples;
+    CardView cardRice;
+    CardView cardPotatoes;
+    CardView cardCake;
+    CardView cardRolls;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_woolworths_products);
+        setContentView(R.layout.activity_foodlovers_products);
 
         //Checking if the customer is logged in:
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
@@ -35,8 +34,8 @@ public class WoolworthsProductsActivity extends AppCompatActivity {
 
         //If the customer is not logged in, display a message and redirect to the main page when opening the application:
         if(email.isEmpty()){
-            Toast.makeText(WoolworthsProductsActivity.this, "Please log in to continue!", Toast.LENGTH_SHORT).show(); //Display a message to the customer asking them to log in:
-            startActivity(new Intent(WoolworthsProductsActivity.this, MainActivity.class)); //Redirect the customer to the main page when opening the application:
+            Toast.makeText(FoodLoversProductsActivity.this, "Please log in to continue!", Toast.LENGTH_SHORT).show(); //Display a message to the customer asking them to log in:
+            startActivity(new Intent(FoodLoversProductsActivity.this, MainActivity.class)); //Redirect the customer to the main page when opening the application:
             finish(); //Finishing the current activity so that customers' cannot go back to it when pressing the back button:
             return; //Return early so that the rest of the method is not executed:
         }
@@ -51,17 +50,17 @@ public class WoolworthsProductsActivity extends AppCompatActivity {
                 switch (item.getItemId()){
                     //If the home icon is clicked, go to the home page:
                     case R.id.home_bottom_navigation:
-                        startActivity(new Intent(WoolworthsProductsActivity.this,LandingActivity.class)); //Redirect the customer to the home page:
+                        startActivity(new Intent(FoodLoversProductsActivity.this,LandingActivity.class)); //Redirect the customer to the home page:
                         finish(); //Finishing the current activity so that customers' cannot go back to it when pressing the back button:
                         break;
                     //If the search icon is clicked,stay on the search discounts page:
                     case R.id.search_bottom_navigation:
-                        startActivity(new Intent(WoolworthsProductsActivity.this,DiscountActivity.class)); //Stay on the search discount page:
+                        startActivity(new Intent(FoodLoversProductsActivity.this,DiscountActivity.class)); //Stay on the search discount page:
                         finish(); //Finishing the current activity so that customers' cannot go back to it when pressing the back button:
                         break;
                     //If the account icon is clicked, go to the account page:
                     case R.id.account_bottom_navigation:
-                        startActivity(new Intent(WoolworthsProductsActivity.this,AccountActivity.class)); //Redirect the customer to the account page:
+                        startActivity(new Intent(FoodLoversProductsActivity.this,AccountActivity.class)); //Redirect the customer to the account page:
                         finish(); //Finishing the current activity so that customers' cannot go back to it when pressing the back button:
                         break;
                     default:
@@ -71,32 +70,38 @@ public class WoolworthsProductsActivity extends AppCompatActivity {
         });
 
         //For the cards on the layout screen
-        cardMilk = findViewById(R.id.cardMilk);
-        cardBananas = findViewById(R.id.cardBananas);
-        cardApples = findViewById(R.id.cardApples);
+        cardRice = findViewById(R.id.cardRice);
+        cardPotatoes = findViewById(R.id.cardPotatoes);
+        cardCake = findViewById(R.id.cardCake);
+        cardRolls = findViewById(R.id.cardRolls);
 
-
-        cardMilk.setOnClickListener(new View.OnClickListener() {
+        cardRice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showToast("Milk Clicked");
+                showToast("Rice Clicked");
             }
         });
-        cardBananas .setOnClickListener(new View.OnClickListener() {
+        cardPotatoes .setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showToast("Bananas Clicked");
+                showToast("Potatoes Clicked");
             }
         });
-        cardApples .setOnClickListener(new View.OnClickListener() {
+        cardCake .setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showToast("Apples Clicked");
+                showToast("Cake Clicked");
+            }
+        });
+        cardRolls .setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showToast("Rolls Clicked");
             }
         });
     }
 
     private void showToast(String message) {
-        Toast.makeText(WoolworthsProductsActivity.this, message, Toast.LENGTH_SHORT).show();
+        Toast.makeText(FoodLoversProductsActivity.this, message, Toast.LENGTH_SHORT).show();
     }
 }

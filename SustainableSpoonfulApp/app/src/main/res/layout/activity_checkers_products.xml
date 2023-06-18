@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/discount_background"
-    tools:context=".WoolworthsProductsActivity">
+    tools:context=".CheckersProductsActivity">
 
-    <!--Discounts Woolworths Heading-->
+    <!--Discounts Checkers Heading-->
     <TextView
-        android:id="@+id/discounts_heading"
+        android:id="@+id/checkers_discount_heading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="50sp"
@@ -17,14 +17,14 @@
         android:layout_marginEnd="50sp"
         android:layout_marginBottom="50sp"
         android:gravity="center"
-        android:text="@string/woolworths_discount_heading"
+        android:text="@string/checkers_discount_heading"
         android:textColor="@color/black"
         android:textSize="50sp"
         android:textStyle="bold" />
 
-    <!--Discounts Woolworths Subheading-->
+    <!--Discounts Checkers Subheading-->
     <TextView
-        android:id="@+id/discounts_subheading"
+        android:id="@+id/checkers_discount_subheading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="50sp"
@@ -32,7 +32,7 @@
         android:layout_marginEnd="50sp"
         android:layout_marginBottom="50sp"
         android:gravity="center"
-        android:text="@string/woolworths_discount_subheading"
+        android:text="@string/checkers_discount_subheading"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold" />
@@ -41,7 +41,7 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/discounts_subheading"
+        android:layout_below="@+id/checkers_discount_subheading"
         android:layout_marginStart="20sp"
         android:layout_marginTop="-50sp"
         android:layout_marginEnd="20sp"
@@ -49,9 +49,9 @@
         android:columnCount="2"
         android:rowCount="3">
 
-        <!--Card 1: Milk-->
+        <!--Card 1: Sandwich-->
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardMilk"
+            android:id="@+id/cardSandwich"
             android:layout_width="60sp"
             android:layout_height="60sp"
             android:layout_row="0"
@@ -75,21 +75,21 @@
                 <ImageView
                     android:layout_width="90sp"
                     android:layout_height="90sp"
-                    android:src="@drawable/milk" />
+                    android:src="@drawable/Sandwich" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="@string/Milk"
+                    android:text="@string/Sandwich"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!--Card 2: Bananas-->
+        <!--Card 2: Onions-->
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardBananas"
+            android:id="@+id/cardOnions"
             android:layout_width="60sp"
             android:layout_height="60sp"
             android:layout_row="0"
@@ -113,21 +113,21 @@
                 <ImageView
                     android:layout_width="90sp"
                     android:layout_height="90sp"
-                    android:src="@drawable/bananas" />
+                    android:src="@drawable/onions" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="@string/Bananas"
+                    android:text="@string/Onions"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!--Card 3: Apples-->
+        <!--Card 3: Ace Pap-->
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardApples"
+            android:id="@+id/cardAce"
             android:layout_width="60sp"
             android:layout_height="60sp"
             android:layout_row="1"
@@ -151,13 +151,13 @@
                 <ImageView
                     android:layout_width="90sp"
                     android:layout_height="90sp"
-                    android:src="@drawable/apples" />
+                    android:src="@drawable/ace_pap" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="@string/Apples"
+                    android:text="@string/AcePap"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
             </LinearLayout>

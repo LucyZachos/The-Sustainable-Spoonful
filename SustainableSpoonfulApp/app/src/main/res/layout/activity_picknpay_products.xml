@@ -74,7 +74,7 @@
                 <ImageView
                     android:layout_width="90sp"
                     android:layout_height="90sp"
-                    android:src="@drawable/Bread" />
+                    android:src="@drawable/bread" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -111,7 +111,7 @@
                 <ImageView
                     android:layout_width="90sp"
                     android:layout_height="90sp"
-                    android:src="@drawable/Oranges" />
+                    android:src="@drawable/oranges" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -148,7 +148,7 @@
                 <ImageView
                     android:layout_width="90sp"
                     android:layout_height="90sp"
-                    android:src="@drawable/Oil" />
+                    android:src="@drawable/oil" />
 
                 <TextView
                     android:layout_width="wrap_content"

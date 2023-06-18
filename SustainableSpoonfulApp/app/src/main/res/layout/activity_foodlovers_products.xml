@@ -5,26 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/discount_background"
-    tools:context=".CheckersProductsActivity">
+    tools:context=".FoodLoversProductsActivity">
 
-    <!--Discounts Checkers Heading-->
+    <!--Discounts Food Lovers Market Heading-->
     <TextView
-        android:id="@+id/checkers_discount_heading"
+        android:id="@+id/food_lovers_discount_heading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="50sp"
-        android:layout_marginTop="50sp"
+        android:layout_marginTop="35sp"
         android:layout_marginEnd="50sp"
         android:layout_marginBottom="50sp"
         android:gravity="center"
-        android:text="@string/woolworths_discount_heading"
+        android:text="@string/food_lovers_discount_heading"
         android:textColor="@color/black"
-        android:textSize="50sp"
+        android:textSize="45sp"
         android:textStyle="bold" />
 
-    <!--Discounts Checkers Subheading-->
+    <!--Discounts Food Lovers Market Subheading-->
     <TextView
-        android:id="@+id/checkers_discount_subheading"
+        android:id="@+id/food_lovers_discount_subheading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="50sp"
@@ -32,16 +32,16 @@
         android:layout_marginEnd="50sp"
         android:layout_marginBottom="50sp"
         android:gravity="center"
-        android:text="@string/woolworths_discount_subheading"
+        android:text="@string/food_lovers_discount_subheading"
         android:textColor="@color/black"
-        android:textSize="30sp"
+        android:textSize="27sp"
         android:textStyle="bold" />
 
     <!--Grid Layout: used for positions of cards-->
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/discounts_subheading"
+        android:layout_below="@+id/food_lovers_discount_subheading"
         android:layout_marginStart="20sp"
         android:layout_marginTop="-50sp"
         android:layout_marginEnd="20sp"
@@ -49,9 +49,9 @@
         android:columnCount="2"
         android:rowCount="3">
 
-        <!--Card 1: Milk-->
+        <!--Card 1: Brown Rice-->
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardMilk"
+            android:id="@+id/cardRice"
             android:layout_width="60sp"
             android:layout_height="60sp"
             android:layout_row="0"
@@ -75,21 +75,21 @@
                 <ImageView
                     android:layout_width="90sp"
                     android:layout_height="90sp"
-                    android:src="@drawable/Milk" />
+                    android:src="@drawable/brownrice" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="@string/Milk"
+                    android:text="@string/BrownRice"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!--Card 2: Bananas-->
+        <!--Card 2: Potatoes-->
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardBananas"
+            android:id="@+id/cardPotatoes"
             android:layout_width="60sp"
             android:layout_height="60sp"
             android:layout_row="0"
@@ -113,21 +113,21 @@
                 <ImageView
                     android:layout_width="90sp"
                     android:layout_height="90sp"
-                    android:src="@drawable/Bananas" />
+                    android:src="@drawable/potatoes" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="@string/Bananas"
+                    android:text="@string/Potatoes"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!--Card 3: Apples-->
+        <!--Card 3: Cake -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardApples"
+            android:id="@+id/cardCake"
             android:layout_width="60sp"
             android:layout_height="60sp"
             android:layout_row="1"
@@ -151,13 +151,51 @@
                 <ImageView
                     android:layout_width="90sp"
                     android:layout_height="90sp"
-                    android:src="@drawable/Apples" />
+                    android:src="@drawable/cake" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="@string/Apples"
+                    android:text="@string/Cake"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--Card 4: Rolls -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardRolls"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            app:cardCornerRadius="8sp"
+            app:cardElevation="8sp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="@color/white"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="90sp"
+                    android:layout_height="90sp"
+                    android:src="@drawable/rolls" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/Rolls"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
             </LinearLayout>
