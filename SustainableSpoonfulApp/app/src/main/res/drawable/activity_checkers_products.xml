@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/discount_background"
+    tools:context=".CheckersProductsActivity">
+
+    <!--Discounts Checkers Heading-->
+    <TextView
+        android:id="@+id/checkers_discount_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="50sp"
+        android:layout_marginEnd="50sp"
+        android:layout_marginBottom="50sp"
+        android:gravity="center"
+        android:text="@string/woolworths_discount_heading"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <!--Discounts Checkers Subheading-->
+    <TextView
+        android:id="@+id/checkers_discount_subheading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="150sp"
+        android:layout_marginEnd="50sp"
+        android:layout_marginBottom="50sp"
+        android:gravity="center"
+        android:text="@string/woolworths_discount_subheading"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <!--Grid Layout: used for positions of cards-->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/discounts_subheading"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="-50sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="60sp"
+        android:columnCount="2"
+        android:rowCount="3">
+
+        <!--Card 1: Milk-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardMilk"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            app:cardCornerRadius="8sp"
+            app:cardElevation="8sp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="@color/white"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="90sp"
+                    android:layout_height="90sp"
+                    android:src="@drawable/Milk" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/Milk"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--Card 2: Bananas-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardBananas"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            app:cardCornerRadius="8sp"
+            app:cardElevation="8sp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="@color/white"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="90sp"
+                    android:layout_height="90sp"
+                    android:src="@drawable/Bananas" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/Bananas"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--Card 3: Apples-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardApples"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            app:cardCornerRadius="8sp"
+            app:cardElevation="8sp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="@color/white"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="90sp"
+                    android:layout_height="90sp"
+                    android:src="@drawable/Apples" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/Apples"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+
+    <!--Bottom Navigation Bar:-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_bar"
+        app:itemTextColor="@drawable/menu_bar_on_select"
+        app:itemIconTint="@drawable/menu_bar_on_select"
+        android:background="@drawable/menu_bar_shape"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

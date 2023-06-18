@@ -39,8 +39,8 @@
 
     <!--17/06/2023: Added string resources instead of using hardcoded strings for the discount cards-->
     <string name="picknpay_discounts_card">3 Available</string>
-    <string name="foodloversmarket_discounts_card">3 Available</string>
-    <string name="woolworths_discounts_card">2 Available</string>
+    <string name="foodloversmarket_discounts_card">2 Available</string>
+    <string name="woolworths_discounts_card">3 Available</string>
     <string name="checkers_discounts_card">3 Available</string>
 
     <!--18/06/2023: Added string resources instead of using hardcoded strings for the bottom navigation menu-->
@@ -58,6 +58,14 @@
     <!--18/06/2023: Added string resources instead of using hardcoded strings for the Discounts Woolworths page:-->
     <string name="woolworths_discount_heading">Woolworths</string>
     <string name="woolworths_discount_subheading">3 Available </string>
+
+    <!--18/06/2023: Added string resources instead of using hardcoded strings for the Discounts Checkers page:-->
+    <string name="checkers_discount_heading">Checkers</string>
+    <string name="checkers_discount_subheading">3 Available </string>
+
+    <!--18/06/2023: Added string resources instead of using hardcoded strings for the Discounts Food Lovers Market page:-->
+    <string name="food_lovers_discount_heading">Food Lovers Market</string>
+    <string name="food_lovers_discount_subheading">4 Available </string>
 
     <!--18/06/2023: Labels for products-->
     <string name="BlueRibbon_Bread"> White Bread Loaf</string>
