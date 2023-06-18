@@ -43,4 +43,9 @@
     <string name="woolworths_discounts_card">5 Available</string>
     <string name="checkers_discounts_card">3 Available</string>
 
+    <!--18/06/2023: Added string resources instead of using hardcoded strings for the bottom navigation menu-->
+    <string name="home_bottom_navigation">Home</string>
+    <string name="search_bottom_navigation">Search</string>
+    <string name="account_bottom_navigation">Account</string>
+
 </resources>

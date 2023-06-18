@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--When items are selected they change to white:-->
+    <item
+        android:color="@color/white"
+        android:state_selected="true"/>
+
+    <!--When items are not selected they are black-->
+    <item
+        android:color="@color/black"
+        android:state_selected="false"/>
+</selector>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--Home Page-->
+    <item
+        android:id="@+id/home_bottom_navigation"
+        android:icon="@drawable/home_icon"
+        android:title="@string/home_bottom_navigation"/>
+
+    <!--Search Discounts Page-->
+    <item
+        android:id="@+id/search_bottom_navigation"
+        android:icon="@drawable/search_icon"
+        android:title="@string/search_bottom_navigation"/>
+
+    <!--Account Page-->
+    <item
+        android:id="@+id/account_bottom_navigation"
+        android:icon="@drawable/account_icon"
+        android:title="@string/account_bottom_navigation"/>
+
+
+</menu>

@@ -99,5 +99,14 @@
         android:src="@drawable/spar"
         tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
-
+    <!--Bottom Navigation Bar:-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_bar"
+        app:itemTextColor="@drawable/menu_bar_on_select"
+        app:itemIconTint="@drawable/menu_bar_on_select"
+        android:background="@drawable/menu_bar_shape"
+        android:layout_height="wrap_content"/>
 </RelativeLayout>

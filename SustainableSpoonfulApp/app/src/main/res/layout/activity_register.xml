@@ -21,7 +21,8 @@
         android:text="@string/register_label"
         android:textColor="@color/white"
         android:textSize="50sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:ignore="TextContrastCheck" />
 
     <!--Name Label-->
     <TextView
