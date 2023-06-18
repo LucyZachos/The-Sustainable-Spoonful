@@ -19,7 +19,7 @@
         android:gravity="center"
         android:text="@string/checkers_discount_heading"
         android:textColor="@color/black"
-        android:textSize="50sp"
+        android:textSize="45sp"
         android:textStyle="bold" />
 
     <!--Discounts Checkers Subheading-->
@@ -83,7 +83,7 @@
                     android:layout_gravity="center"
                     android:text="@string/Sandwich"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -121,7 +121,7 @@
                     android:layout_gravity="center"
                     android:text="@string/Onions"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -159,7 +159,7 @@
                     android:layout_gravity="center"
                     android:text="@string/AcePap"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </GridLayout>

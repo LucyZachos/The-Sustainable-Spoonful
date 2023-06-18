@@ -26,6 +26,10 @@
         <activity android:name=".LandingActivity"/> <!--Landing Page Activity-->
         <activity android:name=".DiscountActivity"/> <!--Discount Page Activity-->
         <activity android:name=".AccountActivity"/> <!--Account Page Activity-->
+        <activity android:name=".CheckersProductsActivity"/> <!--Checkers Page Activity-->
+        <activity android:name=".FoodLoversProductsActivity"/> <!--Food Lovers Activity-->
+        <activity android:name=".PicknPayProductsActivity"/> <!--PicknPay Activity-->
+        <activity android:name=".WoolworthsProductsActivity"/> <!--Woolworths Activity-->
     </application>
 
 </manifest>

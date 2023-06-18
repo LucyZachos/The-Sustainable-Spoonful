@@ -62,7 +62,7 @@
             app:cardCornerRadius="8sp"
             app:cardElevation="8sp"
             app:cardUseCompatPadding="true"
-            android:background="@color/white">
+            app:cardBackgroundColor="@color/white">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -98,7 +98,8 @@
             android:layout_gravity="fill"
             app:cardCornerRadius="8sp"
             app:cardElevation="8sp"
-            app:cardUseCompatPadding="true">
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="@color/white">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -135,7 +136,8 @@
             android:layout_gravity="fill"
             app:cardCornerRadius="8sp"
             app:cardElevation="8sp"
-            app:cardUseCompatPadding="true">
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="@color/white">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -172,7 +174,8 @@
             android:layout_gravity="fill"
             app:cardCornerRadius="8sp"
             app:cardElevation="8sp"
-            app:cardUseCompatPadding="true">
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="@color/white">
 
             <LinearLayout
                 android:layout_width="wrap_content"
