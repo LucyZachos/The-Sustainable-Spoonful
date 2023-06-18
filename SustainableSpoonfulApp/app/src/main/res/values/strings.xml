@@ -38,9 +38,9 @@
     <string name="discount_subheading">Available Stores:</string>
 
     <!--17/06/2023: Added string resources instead of using hardcoded strings for the discount cards-->
-    <string name="picknpay_discounts_card">5 Available</string>
+    <string name="picknpay_discounts_card">3 Available</string>
     <string name="foodloversmarket_discounts_card">3 Available</string>
-    <string name="woolworths_discounts_card">5 Available</string>
+    <string name="woolworths_discounts_card">2 Available</string>
     <string name="checkers_discounts_card">3 Available</string>
 
     <!--18/06/2023: Added string resources instead of using hardcoded strings for the bottom navigation menu-->
@@ -51,4 +51,19 @@
     <!--18/06/2023: Added string resources instead of using hardcoded strings for the Account page:-->
     <string name="account_logoutBtn">Logout</string>
 
+    <!--18/06/2023: Added string resources instead of using hardcoded strings for the Discounts Pick n Pay page:-->
+    <string name="picknpay_discount_heading">Pick n Pay</string>
+    <string name="picknpay_discount_subheading">3 Available </string>
+
+    <!--18/06/2023: Added string resources instead of using hardcoded strings for the Discounts Woolworths page:-->
+    <string name="woolworths_discount_heading">Woolworths</string>
+    <string name="woolworths_discount_subheading">3 Available </string>
+
+    <!--18/06/2023: Labels for products-->
+    <string name="BlueRibbon_Bread"> White Bread Loaf</string>
+    <string name="Oranges">Oranges 1Kg </string>
+    <string name="Oil">SunfLower Oil 1L</string>
+    <string name="Milk">Full Cream Milk 2L</string>
+    <string name="Bananas">Pack of Bananas</string>
+    <string name="Apples">Apples 1.5Kg</string>
 </resources>
