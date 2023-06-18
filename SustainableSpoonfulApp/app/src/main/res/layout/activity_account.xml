@@ -26,10 +26,11 @@
         android:id="@+id/account_name_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textColor="@android:color/black"
-        android:layout_marginTop="250sp"
-        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150sp"
+        android:layout_marginStart="45sp"
+        android:gravity="center"
         />
 
     <!--Surname Label-->
@@ -37,10 +38,11 @@
         android:id="@+id/account_surname_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textColor="@android:color/black"
         android:layout_below="@id/account_name_text"
-        android:layout_centerHorizontal="true"
+        android:layout_marginStart="45sp"
+        android:gravity="center"
         />
 
     <!--Email Label-->
@@ -48,10 +50,11 @@
         android:id="@+id/account_email_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textColor="@android:color/black"
         android:layout_below="@id/account_surname_text"
-        android:layout_centerHorizontal="true"
+        android:layout_marginStart="45sp"
+        android:gravity="center"
         />
 
 

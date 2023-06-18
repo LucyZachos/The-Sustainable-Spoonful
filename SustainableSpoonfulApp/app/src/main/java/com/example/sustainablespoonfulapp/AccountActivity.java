@@ -115,12 +115,17 @@ public class AccountActivity extends AppCompatActivity{
             int customerSurnameIndex = cursor.getColumnIndex(DatabaseHelper.COLUMN_CUSTOMER_SURNAME);
             int customerEmailIndex = cursor.getColumnIndex(DatabaseHelper.COLUMN_CUSTOMER_EMAIL);
 
+
+            String customerName = cursor.getString(customerNameIndex);
+            String customerSurname = cursor.getString(customerSurnameIndex);
+            String customerEmail = cursor.getString(customerEmailIndex);
+
             cursor.close();
             db.close();
 
-            nameTextView.setText(customerNameIndex);
-            surnameTextView.setText(customerSurnameIndex);
-            emailTextView.setText(customerEmailIndex);
+            nameTextView.setText("Name: " + customerName);
+            surnameTextView.setText("Surname: " + customerSurname);
+            emailTextView.setText("Email: " + customerEmail);
         }
     }
 
