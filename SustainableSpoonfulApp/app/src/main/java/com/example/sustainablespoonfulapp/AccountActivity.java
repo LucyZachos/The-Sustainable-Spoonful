@@ -13,12 +13,20 @@ import com.google.android.material.navigation.NavigationBarView;
 import androidx.appcompat.app.AlertDialog;
 import android.content.DialogInterface;
 import android.widget.Button;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.widget.TextView;
 
 
 public class AccountActivity extends AppCompatActivity{
 
     BottomNavigationView bottom_nav_bar;
     Button logoutButton;
+
+    TextView nameTextView;
+    TextView surnameTextView;
+    TextView emailTextView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +48,9 @@ public class AccountActivity extends AppCompatActivity{
         bottom_nav_bar = findViewById(R.id.bottom_nav_bar);
         //bottom_nav_bar.setSelectedItemId(R.id.account_bottom_navigation); //Set the account icon to selected when on this page:
         logoutButton = findViewById(R.id.account_logout_button);
+        nameTextView = findViewById(R.id.account_name_text);
+        surnameTextView = findViewById(R.id.account_surname_text);
+        emailTextView = findViewById(R.id.account_email_text);
 
         bottom_nav_bar.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -69,6 +80,48 @@ public class AccountActivity extends AppCompatActivity{
         logoutButton.setOnClickListener(v -> {
             showLogoutConfirmationBox();
         });
+
+        loadCustomerDetails();
+    }
+
+    private void loadCustomerDetails(){
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        String email = sharedPreferences.getString("email", "");
+
+        DatabaseHelper databaseHelper = new DatabaseHelper(this);
+        SQLiteDatabase db = databaseHelper.getReadableDatabase();
+
+        String[] projection = {
+                DatabaseHelper.COLUMN_CUSTOMER_NAME,
+                DatabaseHelper.COLUMN_CUSTOMER_SURNAME,
+                DatabaseHelper.COLUMN_CUSTOMER_EMAIL
+        };
+
+        String selection = DatabaseHelper.COLUMN_CUSTOMER_EMAIL + " =?";
+        String[] selectionArgs = {email};
+
+        Cursor cursor = db.query(
+               DatabaseHelper.TABLE_NAME_CUSTOMER,
+               projection,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null
+        );
+
+        if(cursor != null && cursor.moveToFirst()){
+            int customerNameIndex = cursor.getColumnIndex(DatabaseHelper.COLUMN_CUSTOMER_NAME);
+            int customerSurnameIndex = cursor.getColumnIndex(DatabaseHelper.COLUMN_CUSTOMER_SURNAME);
+            int customerEmailIndex = cursor.getColumnIndex(DatabaseHelper.COLUMN_CUSTOMER_EMAIL);
+
+            cursor.close();
+            db.close();
+
+            nameTextView.setText(customerNameIndex);
+            surnameTextView.setText(customerSurnameIndex);
+            emailTextView.setText(customerEmailIndex);
+        }
     }
 
     //Function to display a confirmation box to the customer asking if they want to logout:
