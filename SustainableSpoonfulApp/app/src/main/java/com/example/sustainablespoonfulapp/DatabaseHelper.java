@@ -73,7 +73,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
                 COLUMN_DISCOUNT_PERCENTAGE + " TEXT," +
                 COLUMN_DISCOUNT_PRODUCT_NAME + " TEXT," +
                 COLUMN_DISCOUNT_RETAILER_ID + " INTEGER," +
-                COLUMN_DISCOUNT_IMAGE + " BLOB," +
+                COLUMN_DISCOUNT_IMAGE + " BLOB," + //Discounted Product Image Column
                 "FOREIGN KEY (" + COLUMN_DISCOUNT_RETAILER_ID + ") REFERENCES " +
                 TABLE_NAME_RETAILER + "(" + COLUMN_RETAILER_ID + "))";
         db.execSQL(createDiscountedProductsTable);
@@ -85,10 +85,11 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         insertDiscountedProductsData(db);
     }
 
+    //Function to convert drawable resources to bitmap:
     private byte[] convertImageToByteArray(int imageResource){
         Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), imageResource);
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
         return stream.toByteArray();
     }
 
