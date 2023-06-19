@@ -1,5 +1,6 @@
 package com.example.sustainablespoonfulapp;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -37,7 +38,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     }
 
     @Override
-    public void  onCreate(SQLiteDatabase db){
+    public void  onCreate(SQLiteDatabase db){ //creates database tables and inserts initial data:
         //Create the database tables:
         //CUSTOMER TABLE:
         String createCustomerTable = "CREATE TABLE " + TABLE_NAME_CUSTOMER + " (" +
@@ -65,11 +66,142 @@ public class DatabaseHelper extends SQLiteOpenHelper{
                 "FOREIGN KEY (" + COLUMN_DISCOUNT_RETAILER_ID + ") REFERENCES " +
                 TABLE_NAME_RETAILER + "(" + COLUMN_RETAILER_ID + "))";
         db.execSQL(createDiscountedProductsTable);
+
+        //Function to insert the data into the Retailer Table:
+        insertRetailerData(db);
+
+        //Function to insert the data into the Discounted Products Table:
+        insertDiscountedProductsData(db);
+
+    }
+
+    private void insertRetailerData(SQLiteDatabase db){
+        //Create a ContentValues object so that it can hold the column values for each row:
+        ContentValues values = new ContentValues();
+
+        //Inserting the first shop:
+        values.put(COLUMN_RETAILER_NAME, "PicknPay");
+        values.put(COLUMN_RETAILER_ADDRESS, "Greenstone");
+        db.insert(TABLE_NAME_RETAILER, null, values);
+
+        //Inserting the second shop:
+        values.clear(); //Clear the ContentValues object so that it can be reused:
+        values.put(COLUMN_RETAILER_NAME, "Woolworths");
+        values.put(COLUMN_RETAILER_ADDRESS, "Greenstone");
+        db.insert(TABLE_NAME_RETAILER, null, values);
+
+        //Inserting the third shop:
+        values.clear(); //Clear the ContentValues object so that it can be reused:
+        values.put(COLUMN_RETAILER_NAME, "Checkers");
+        values.put(COLUMN_RETAILER_ADDRESS, "Meadowdale");
+        db.insert(TABLE_NAME_RETAILER, null, values);
+
+        //Inserting the fourth shop:
+        values.clear(); //Clear the ContentValues object so that it can be reused:
+        values.put(COLUMN_RETAILER_NAME, "Food Lover's Market");
+        values.put(COLUMN_RETAILER_ADDRESS, "Greenstone");
+        db.insert(TABLE_NAME_RETAILER, null, values);
+    }
+
+    public void insertDiscountedProductsData(SQLiteDatabase db){
+        //Create a ContentValues object so that it can hold the column values for each row:
+        ContentValues values = new ContentValues();
+
+        //Insert the first discounted product:
+        values.put(COLUMN_DISCOUNT_CODE, "P1CkNP@yI1");
+        values.put(COLUMN_DISCOUNT_PERCENTAGE, "10%");
+        values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "White Bread Loaf");
+        values.put(COLUMN_DISCOUNT_RETAILER_ID, 1); //PicknPay is the first store that is loaded:
+        db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
+
+        values.clear(); //Clear the ContentValues object so that it can be reused:
+        values.put(COLUMN_DISCOUNT_CODE, "P1CkNP@yO2");
+        values.put(COLUMN_DISCOUNT_PERCENTAGE, "20%");
+        values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "Oranges 1 KG");
+        values.put(COLUMN_DISCOUNT_RETAILER_ID, 1); //PicknPay is the first store that is loaded:
+        db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
+
+        values.clear(); //Clear the ContentValues object so that it can be reused:
+        values.put(COLUMN_DISCOUNT_CODE, "P1CkNP@yS0");
+        values.put(COLUMN_DISCOUNT_PERCENTAGE, "30%");
+        values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "Sunflower Oil 1 L");
+        values.put(COLUMN_DISCOUNT_RETAILER_ID, 1); //PicknPay is the first store that is loaded:
+        db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
+
+        //Insert the first discounted product:
+        values.clear(); //Clear the ContentValues object so that it can be reused:
+        values.put(COLUMN_DISCOUNT_CODE, "W0oLWORTHSM3");
+        values.put(COLUMN_DISCOUNT_PERCENTAGE, "15%");
+        values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "Full Cream Milk 1 L");
+        values.put(COLUMN_DISCOUNT_RETAILER_ID, 2); //Woolworths is the second store that is loaded:
+        db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
+
+        values.clear(); //Clear the ContentValues object so that it can be reused:
+        values.put(COLUMN_DISCOUNT_CODE, "W0oLWORTHSBB");
+        values.put(COLUMN_DISCOUNT_PERCENTAGE, "10%");
+        values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "Pack of Bananas");
+        values.put(COLUMN_DISCOUNT_RETAILER_ID, 2); //Woolworths is the second store that is loaded:
+        db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
+
+        values.clear(); //Clear the ContentValues object so that it can be reused:
+        values.put(COLUMN_DISCOUNT_CODE, "W0oLWORTHSA@");
+        values.put(COLUMN_DISCOUNT_PERCENTAGE, "30%");
+        values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "Apples 1.5 KG");
+        values.put(COLUMN_DISCOUNT_RETAILER_ID, 2); //Woolworths is the second store that is loaded:
+        db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
+
+        values.clear(); //Clear the ContentValues object so that it can be reused:
+        values.put(COLUMN_DISCOUNT_CODE, "CHECKER$U$");
+        values.put(COLUMN_DISCOUNT_PERCENTAGE, "60%");
+        values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "Ultimate Sandwich");
+        values.put(COLUMN_DISCOUNT_RETAILER_ID, 3); //Checkers is the third store that is loaded:
+        db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
+
+        values.clear(); //Clear the ContentValues object so that it can be reused:
+        values.put(COLUMN_DISCOUNT_CODE, "CHECKER$OO");
+        values.put(COLUMN_DISCOUNT_PERCENTAGE, "35%");
+        values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "Onions 1 KG");
+        values.put(COLUMN_DISCOUNT_RETAILER_ID, 3); //Checkers is the third store that is loaded:
+        db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
+
+        values.clear(); //Clear the ContentValues object so that it can be reused:
+        values.put(COLUMN_DISCOUNT_CODE, "CHECKER$AP");
+        values.put(COLUMN_DISCOUNT_PERCENTAGE, "60%");
+        values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "Ace Pap 1 KG");
+        values.put(COLUMN_DISCOUNT_RETAILER_ID, 3); //Checkers is the third store that is loaded:
+        db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
+
+        values.clear(); //Clear the ContentValues object so that it can be reused:
+        values.put(COLUMN_DISCOUNT_CODE, "F00DLOVER$R1");
+        values.put(COLUMN_DISCOUNT_PERCENTAGE, "40%");
+        values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "Brown Rice 1 KG");
+        values.put(COLUMN_DISCOUNT_RETAILER_ID, 4); //Food Lover's Market is the fourth store that is loaded:
+        db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
+
+        values.clear(); //Clear the ContentValues object so that it can be reused:
+        values.put(COLUMN_DISCOUNT_CODE, "F00DLOVER$UT");
+        values.put(COLUMN_DISCOUNT_PERCENTAGE, "60%");
+        values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "UTD Potatoes 1 KG");
+        values.put(COLUMN_DISCOUNT_RETAILER_ID, 4); //Food Lover's Market is the fourth store that is loaded:
+        db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
+
+        values.clear(); //Clear the ContentValues object so that it can be reused:
+        values.put(COLUMN_DISCOUNT_CODE, "F00DLOVER$SC");
+        values.put(COLUMN_DISCOUNT_PERCENTAGE, "70%");
+        values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "Strawberry Chocolate Cake");
+        values.put(COLUMN_DISCOUNT_RETAILER_ID, 4); //Food Lover's Market is the fourth store that is loaded:
+        db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
+
+        values.clear(); //Clear the ContentValues object so that it can be reused:
+        values.put(COLUMN_DISCOUNT_CODE, "F00DLOVER$BB");
+        values.put(COLUMN_DISCOUNT_PERCENTAGE, "80%");
+        values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "Bread Rolls x6");
+        values.put(COLUMN_DISCOUNT_RETAILER_ID, 4); //Food Lover's Market is the fourth store that is loaded:
+        db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
-        //Upgrade the database if necessary:
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){  //Upgrade the database schema if necessary:
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME_CUSTOMER);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME_RETAILER);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME_DISCOUNTED_PRODUCTS);
