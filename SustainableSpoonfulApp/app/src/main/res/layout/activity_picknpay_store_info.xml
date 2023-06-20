@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/store_info_background"
+    tools:context=".PicknPayStoreActivity"
+    >
+
+    <!--Heading: PicknPay-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/picknpay_discount_heading"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        android:layout_marginTop="40sp"
+        android:layout_marginStart="60sp"
+        android:textAlignment="center"
+
+        />
+    <!--Image: Physical of the store-->
+    <ImageView
+        android:id="@+id/picknpay_physical_store_image"
+        android:layout_width="wrap_content"
+        android:layout_height="200sp"
+        android:src="@drawable/picknpay_physical_store"
+        android:layout_marginTop="160sp"
+
+        />
+
+</RelativeLayout>
