@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:text="@string/checkers_discount_heading"
         android:textColor="@color/white"
-        android:textSize="60sp"
+        android:textSize="50sp"
         android:layout_marginTop="40sp"
         android:layout_marginStart="65sp"
         android:textAlignment="center"
@@ -40,7 +40,7 @@
         android:text="@string/Checkers_Address_Label"
         android:textColor="@color/black"
         android:textSize="20sp"
-        android:layout_marginTop="420sp"
+        android:layout_marginTop="380sp"
         android:layout_marginStart="70sp"
         android:layout_marginEnd="20sp"
         android:textAlignment="center"
@@ -54,8 +54,8 @@
         android:layout_height="wrap_content"
         android:text="@string/Checkers_paragraph"
         android:textColor="@color/black"
-        android:textSize="20sp"
-        android:layout_marginTop="500sp"
+        android:textSize="15sp"
+        android:layout_marginTop="450sp"
         android:layout_marginStart="20sp"
         android:layout_marginEnd="20sp"
         android:textAlignment="center"
@@ -70,11 +70,11 @@
         android:text="@string/view_productsbtn"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:layout_marginTop="640sp"
-        android:layout_marginStart="90sp"
+        android:layout_marginTop="520sp"
+        android:layout_marginStart="75sp"
         android:layout_marginEnd="20sp"
         android:backgroundTint="@color/store_purple"
-        android:padding="20sp"/>
+        android:padding="15sp"/>
 
     <!--Bottom Navigation Bar:-->
     <com.google.android.material.bottomnavigation.BottomNavigationView

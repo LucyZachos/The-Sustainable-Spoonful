@@ -5,15 +5,19 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.MenuItem;
+import android.widget.ImageButton;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import android.view.View;
 
 public class LandingActivity extends AppCompatActivity {
 
     BottomNavigationView bottom_nav_bar;
+
+    ImageButton landing_picknpay_button, landing_foodloversmarket_button, landing_checkers_button, landing_woolworths_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +46,40 @@ public class LandingActivity extends AppCompatActivity {
                     default:
                         return false;
                 }
+            }
+        });
+
+        //For the image buttons on the landing screen:
+        landing_picknpay_button = findViewById(R.id.landing_picknpay_button);
+        landing_foodloversmarket_button = findViewById(R.id.landing_foodloversmarket_button);
+        landing_checkers_button = findViewById(R.id.landing_checkers_button);
+        landing_woolworths_button = findViewById(R.id.landing_woolworths_button);
+
+        landing_picknpay_button.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intent = new Intent(LandingActivity.this,PicknPayStoreActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        landing_foodloversmarket_button.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intent = new Intent(LandingActivity.this,FoodLoversStoreActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        landing_checkers_button.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intent = new Intent(LandingActivity.this,CheckersStoreActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        landing_woolworths_button.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intent = new Intent(LandingActivity.this,WoolworthsStoreActivity.class);
+                startActivity(intent);
             }
         });
     }

@@ -30,6 +30,10 @@
         <activity android:name=".FoodLoversProductsActivity"/> <!--Food Lovers Activity-->
         <activity android:name=".PicknPayProductsActivity"/> <!--PicknPay Activity-->
         <activity android:name=".WoolworthsProductsActivity"/> <!--Woolworths Activity-->
+        <activity android:name=".PicknPayStoreActivity"/> <!--About PicknPay Page:-->
+        <activity android:name=".FoodLoversStoreActivity"/> <!--About Food Lovers Market Page:-->
+        <activity android:name=".CheckersStoreActivity"/> <!--About Checkers Store Page:-->
+        <activity android:name=".WoolworthsStoreActivity"/> <!--About Woolworths Page:-->
     </application>
 
 </manifest>
