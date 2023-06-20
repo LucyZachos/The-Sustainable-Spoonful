@@ -2,30 +2,65 @@ package com.example.sustainablespoonfulapp;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.Image;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.MenuItem;
 import android.widget.Toast;
-import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.widget.ImageView;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DiscountActivity extends AppCompatActivity {
 
-    BottomNavigationView bottom_nav_bar;
+    //Create a list for the store images:
+    private List<Bitmap> storeImages;
 
-    CardView cardPicknpay;
-    CardView cardCheckers;
-    CardView cardWoolworths;
-    CardView cardFoodLoversMarket;
+    BottomNavigationView bottom_nav_bar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_discount);
+
+        //Initialising the store discount images:
+        storeImages = new ArrayList<>();
+
+        //Fetch the store images from the database:
+        DatabaseHelper databaseHelper = new DatabaseHelper(this);
+
+        List<byte[]> imageBytes = databaseHelper.getAllStoreImages();
+
+        //Convert the byte arrays to bitmaps:
+        for(byte[] bytes : imageBytes){
+            Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+            storeImages.add(bitmap);
+        }
+
+        //Displaying the images in the ImageViews:
+        ImageView store_image_view1 = findViewById(R.id.store_image_view1);
+        ImageView store_image_view2 = findViewById(R.id.store_image_view2);
+        ImageView store_image_view3 = findViewById(R.id.store_image_view3);
+        ImageView store_image_view4 = findViewById(R.id.store_image_view4);
+
+        if(storeImages.size()>0){
+            store_image_view1.setImageBitmap(storeImages.get(0));
+        }
+        if(storeImages.size()>1){
+            store_image_view2.setImageBitmap(storeImages.get(1));
+        }
+        if(storeImages.size()>2){
+            store_image_view3.setImageBitmap(storeImages.get(2));
+        }
+        if(storeImages.size()>3){
+            store_image_view4.setImageBitmap(storeImages.get(3));
+        }
 
         bottom_nav_bar = findViewById(R.id.bottom_nav_bar);
         bottom_nav_bar.setSelectedItemId(R.id.search_bottom_navigation); //Set the search icon to selected when on this page:
@@ -52,49 +87,6 @@ public class DiscountActivity extends AppCompatActivity {
                 }
             }
         });
-
-        //For the cards on the layout screen
-        cardPicknpay = findViewById(R.id.cardPicknpay);
-        cardCheckers = findViewById(R.id.cardCheckers);
-        cardWoolworths = findViewById(R.id.cardWoolworths);
-        cardFoodLoversMarket = findViewById(R.id.cardFoodLoversMarket);
-
-        cardPicknpay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(DiscountActivity.this,PicknPayProductsActivity.class);
-                startActivity(intent);
-            }
-        });
-        cardCheckers .setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(DiscountActivity.this,CheckersProductsActivity.class);
-                startActivity(intent);
-            }
-        });
-        cardWoolworths .setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(DiscountActivity.this,WoolworthsProductsActivity.class);
-                startActivity(intent);
-            }
-        });
-        cardFoodLoversMarket.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(DiscountActivity.this,FoodLoversProductsActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
-
-    private void showToast(String message) {
-        Toast.makeText(DiscountActivity.this, message, Toast.LENGTH_SHORT).show();
     }
 
     @Override

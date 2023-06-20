@@ -46,7 +46,7 @@ public class AccountActivity extends AppCompatActivity{
         }
 
         bottom_nav_bar = findViewById(R.id.bottom_nav_bar);
-        //bottom_nav_bar.setSelectedItemId(R.id.account_bottom_navigation); //Set the account icon to selected when on this page:
+        bottom_nav_bar.setSelectedItemId(R.id.account_bottom_navigation); //Set the account icon to selected when on this page:
         logoutButton = findViewById(R.id.account_logout_button);
         nameTextView = findViewById(R.id.account_name_text);
         surnameTextView = findViewById(R.id.account_surname_text);

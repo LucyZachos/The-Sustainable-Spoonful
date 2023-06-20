@@ -6,8 +6,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-
 import java.io.ByteArrayOutputStream;
+import java.util.ArrayList;
+import java.util.List;
+import android.database.Cursor;
 
 public class DatabaseHelper extends SQLiteOpenHelper{
 
@@ -93,6 +95,26 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         return stream.toByteArray();
     }
 
+    //Method to retrieve all the store images from the retailer table:
+    public List<byte[]> getAllStoreImages() {
+        List<byte[]> storeImages = new ArrayList<>();
+        SQLiteDatabase database = getReadableDatabase();
+        String query = "SELECT " + COLUMN_RETAILER_IMAGE + " FROM " + TABLE_NAME_RETAILER; //query to select all retailer images from the retailer table:
+        Cursor cursor = database.rawQuery(query, null);
+        int columnIndex = cursor.getColumnIndex(COLUMN_RETAILER_IMAGE);
+
+        if(columnIndex != -1){
+            if(cursor.moveToFirst()){
+                do{
+                    byte[] image = cursor.getBlob(columnIndex);
+                    storeImages.add(image);
+                }while(cursor.moveToNext());
+            }
+        }
+        cursor.close();
+        return storeImages;
+    }
+
     private void insertRetailerData(SQLiteDatabase db){
         //Create a ContentValues object so that it can hold the column values for each row:
         ContentValues values = new ContentValues();
@@ -100,28 +122,28 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         //Inserting the first shop:
         values.put(COLUMN_RETAILER_NAME, "PicknPay");
         values.put(COLUMN_RETAILER_ADDRESS, "Greenstone");
-        values.put(COLUMN_RETAILER_IMAGE, convertImageToByteArray(R.drawable.picknpay));
+        values.put(COLUMN_RETAILER_IMAGE, convertImageToByteArray(R.drawable.picknpay_discount));
         db.insert(TABLE_NAME_RETAILER, null, values);
 
         //Inserting the second shop:
         values.clear(); //Clear the ContentValues object so that it can be reused:
         values.put(COLUMN_RETAILER_NAME, "Woolworths");
         values.put(COLUMN_RETAILER_ADDRESS, "Greenstone");
-        values.put(COLUMN_RETAILER_IMAGE, convertImageToByteArray(R.drawable.woolworths));
+        values.put(COLUMN_RETAILER_IMAGE, convertImageToByteArray(R.drawable.woolworths_discount));
         db.insert(TABLE_NAME_RETAILER, null, values);
 
         //Inserting the third shop:
         values.clear(); //Clear the ContentValues object so that it can be reused:
         values.put(COLUMN_RETAILER_NAME, "Checkers");
         values.put(COLUMN_RETAILER_ADDRESS, "Meadowdale");
-        values.put(COLUMN_RETAILER_IMAGE, convertImageToByteArray(R.drawable.checkers));
+        values.put(COLUMN_RETAILER_IMAGE, convertImageToByteArray(R.drawable.checkers_discount));
         db.insert(TABLE_NAME_RETAILER, null, values);
 
         //Inserting the fourth shop:
         values.clear(); //Clear the ContentValues object so that it can be reused:
         values.put(COLUMN_RETAILER_NAME, "Food Lover's Market");
         values.put(COLUMN_RETAILER_ADDRESS, "Greenstone");
-        values.put(COLUMN_RETAILER_IMAGE, convertImageToByteArray(R.drawable.foodloversmarket));
+        values.put(COLUMN_RETAILER_IMAGE, convertImageToByteArray(R.drawable.foodloversmarket_discount));
         db.insert(TABLE_NAME_RETAILER, null, values);
     }
 
