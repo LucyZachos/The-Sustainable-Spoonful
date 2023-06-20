@@ -62,9 +62,9 @@
         android:textStyle="bold"
         />
 
-    <!--Confirm Button-->
+    <!--View Products Button-->
     <Button
-        android:id="@+id/login_confirm_button"
+        android:id="@+id/view_products_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/view_productsbtn"
