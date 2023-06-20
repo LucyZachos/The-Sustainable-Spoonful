@@ -2,11 +2,11 @@ package com.example.sustainablespoonfulapp;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.media.Image;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.MenuItem;
 import android.widget.Toast;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -23,6 +23,12 @@ public class DiscountActivity extends AppCompatActivity {
     private List<Bitmap> storeImages;
 
     BottomNavigationView bottom_nav_bar;
+
+    //TextViews used to display the number of discounts that are available on the page:
+    TextView picknpayTextView;
+    TextView checkersTextView;
+    TextView woolworthsTextView;
+    TextView foodloversmarketTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,18 +55,35 @@ public class DiscountActivity extends AppCompatActivity {
         ImageView store_image_view3 = findViewById(R.id.store_image_view3);
         ImageView store_image_view4 = findViewById(R.id.store_image_view4);
 
-        if(storeImages.size()>0){
+        if(storeImages.size()>0){ //Display PicknPay logo:
             store_image_view1.setImageBitmap(storeImages.get(0));
         }
-        if(storeImages.size()>1){
+        if(storeImages.size()>1){ //Display Woolworths logo:
             store_image_view2.setImageBitmap(storeImages.get(1));
         }
-        if(storeImages.size()>2){
+        if(storeImages.size()>2){ //Display Checkers logo:
             store_image_view3.setImageBitmap(storeImages.get(2));
         }
-        if(storeImages.size()>3){
+        if(storeImages.size()>3){ //Display Foodloversmarket logo:
             store_image_view4.setImageBitmap(storeImages.get(3));
         }
+
+        //This will be used to find the location of the TextViews on the discounts page:
+        picknpayTextView = findViewById(R.id.picknpay_card_text);
+        woolworthsTextView = findViewById(R.id.woolworths_card_text);
+        checkersTextView = findViewById(R.id.checkers_card_text);
+        foodloversmarketTextView = findViewById(R.id.foodloversmarket_card_text);
+
+        //Create a new database helper:
+        DatabaseHelper dbhelper = new DatabaseHelper(this);
+        //Set the retailer ids for each store that will be passed into the sql count discounted products query:
+        int picknpayId = 1, woolworthsId = 2, checkersId = 3, foodloversID = 4;
+
+        //Set the text for each TextView by calling the getDiscountProductCount function and passing in the retailer id:
+        picknpayTextView.setText(dbhelper.getDiscountedProductCount(picknpayId));
+        woolworthsTextView.setText(dbhelper.getDiscountedProductCount(woolworthsId));
+        checkersTextView.setText(dbhelper.getDiscountedProductCount(checkersId));
+        foodloversmarketTextView.setText(dbhelper.getDiscountedProductCount(foodloversID));
 
         bottom_nav_bar = findViewById(R.id.bottom_nav_bar);
         bottom_nav_bar.setSelectedItemId(R.id.search_bottom_navigation); //Set the search icon to selected when on this page:

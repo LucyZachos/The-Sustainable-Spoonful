@@ -38,7 +38,6 @@
         android:textStyle="bold" />
 
     <!--Cards: Contain store image and available discounts -->
-
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -78,18 +77,19 @@
                     />
 
                 <TextView
+                    android:id="@+id/picknpay_card_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="@string/picknpay_discounts_card"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textColor="@color/discount_red"
+                    android:layout_marginTop="20sp"
+                    android:textSize="14sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!--Card 2: Checkers-->
+        <!--Card 2: Woolworths-->
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardCheckers"
+            android:id="@+id/cardWoolworths"
             android:layout_width="60sp"
             android:layout_height="60sp"
             android:layout_row="1"
@@ -116,18 +116,18 @@
                     />
 
                 <TextView
-                    android:id="@+id/checkers_card_text"
+                    android:id="@+id/woolworths_card_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/checkers_discounts_card"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textColor="@color/discount_red"
+                    android:layout_marginTop="20sp"
+                    android:textSize="14sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!--Card 3: Woolworths-->
+        <!--Card 3: Checkers-->
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardWoolworths"
+            android:id="@+id/cardCheckers"
             android:layout_width="60sp"
             android:layout_height="60sp"
             android:layout_row="0"
@@ -154,12 +154,12 @@
                     />
 
                 <TextView
-                    android:id="@+id/woolworths_card_text"
+                    android:id="@+id/checkers_card_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/woolworths_discounts_card"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textColor="@color/discount_red"
+                    android:layout_marginTop="20sp"
+                    android:textSize="14sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -195,9 +195,9 @@
                     android:id="@+id/foodloversmarket_card_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/foodloversmarket_discounts_card"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textColor="@color/discount_red"
+                    android:layout_marginTop="20sp"
+                    android:textSize="14sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </GridLayout>
@@ -212,5 +212,4 @@
         app:itemIconTint="@drawable/menu_bar_on_select"
         android:background="@drawable/menu_bar_shape"
         android:layout_height="wrap_content"/>
-
 </RelativeLayout>

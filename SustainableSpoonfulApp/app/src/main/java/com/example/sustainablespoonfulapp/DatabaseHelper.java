@@ -87,6 +87,31 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         insertDiscountedProductsData(db);
     }
 
+    //Function to count the discounted products in the discounted products table based on the Retailer ID:
+    public String getDiscountedProductCount(int retailerId){
+        //Get a readable database:
+        SQLiteDatabase datab = getReadableDatabase();
+
+        //Create the query to count all of the products in the discounted products table based on the retailer id and return the result:
+        String query = "SELECT COUNT(*) FROM " + TABLE_NAME_DISCOUNTED_PRODUCTS +
+                " WHERE " + COLUMN_DISCOUNT_RETAILER_ID + " = " + retailerId;
+        Cursor cursor = datab.rawQuery(query, null);
+
+        //Initialise the counter to 0:
+        int count=0;
+
+        if(cursor !=null && cursor.moveToFirst()){
+            count = cursor.getInt(0);
+        }
+        cursor.close();
+
+        if(count == 0){ //No result was found, display "No Discounts"
+            return "No Discounts";
+        }else{ //Result was found, fetch the number of products and concatenate with a string saying 'Discounts'
+            return count + " Discounts";
+        }
+    }
+
     //Function to convert drawable resources to bitmap:
     private byte[] convertImageToByteArray(int imageResource){
         Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), imageResource);
