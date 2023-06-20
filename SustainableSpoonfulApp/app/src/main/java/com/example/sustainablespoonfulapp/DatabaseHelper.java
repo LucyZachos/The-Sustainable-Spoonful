@@ -181,7 +181,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         values.put(COLUMN_DISCOUNT_PERCENTAGE, "10%");
         values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "White Bread Loaf");
         values.put(COLUMN_DISCOUNT_RETAILER_ID, 1); //PicknPay is the first store that is loaded:
-        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.bread));
+        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.bread_compressed));
         db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
 
         values.clear(); //Clear the ContentValues object so that it can be reused:
@@ -189,7 +189,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         values.put(COLUMN_DISCOUNT_PERCENTAGE, "20%");
         values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "Oranges 1 KG");
         values.put(COLUMN_DISCOUNT_RETAILER_ID, 1); //PicknPay is the first store that is loaded:
-        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.oranges));
+        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.oranges_compressed));
         db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
 
         values.clear(); //Clear the ContentValues object so that it can be reused:
@@ -197,7 +197,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         values.put(COLUMN_DISCOUNT_PERCENTAGE, "30%");
         values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "Sunflower Oil 1 L");
         values.put(COLUMN_DISCOUNT_RETAILER_ID, 1); //PicknPay is the first store that is loaded:
-        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.oil));
+        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.oil_compressed));
         db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
 
         //Insert the first discounted product:
@@ -206,7 +206,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         values.put(COLUMN_DISCOUNT_PERCENTAGE, "15%");
         values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "Full Cream Milk 1 L");
         values.put(COLUMN_DISCOUNT_RETAILER_ID, 2); //Woolworths is the second store that is loaded:
-        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.milk));
+        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.milk_compressed));
         db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
 
         values.clear(); //Clear the ContentValues object so that it can be reused:
@@ -214,7 +214,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         values.put(COLUMN_DISCOUNT_PERCENTAGE, "10%");
         values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "Pack of Bananas");
         values.put(COLUMN_DISCOUNT_RETAILER_ID, 2); //Woolworths is the second store that is loaded:
-        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.bananas));
+        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.bananas_compressed));
         db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
 
         values.clear(); //Clear the ContentValues object so that it can be reused:
@@ -222,7 +222,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         values.put(COLUMN_DISCOUNT_PERCENTAGE, "30%");
         values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "Apples 1.5 KG");
         values.put(COLUMN_DISCOUNT_RETAILER_ID, 2); //Woolworths is the second store that is loaded:
-        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.apples));
+        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.apples_compressed));
         db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
 
         values.clear(); //Clear the ContentValues object so that it can be reused:
@@ -230,7 +230,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         values.put(COLUMN_DISCOUNT_PERCENTAGE, "60%");
         values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "Ultimate Sandwich");
         values.put(COLUMN_DISCOUNT_RETAILER_ID, 3); //Checkers is the third store that is loaded:
-        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.sandwich));
+        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.sandwich_compressed));
         db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
 
         values.clear(); //Clear the ContentValues object so that it can be reused:
@@ -238,7 +238,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         values.put(COLUMN_DISCOUNT_PERCENTAGE, "35%");
         values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "Onions 1 KG");
         values.put(COLUMN_DISCOUNT_RETAILER_ID, 3); //Checkers is the third store that is loaded:
-        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.onions));
+        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.onions_compressed));
         db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
 
         values.clear(); //Clear the ContentValues object so that it can be reused:
@@ -246,7 +246,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         values.put(COLUMN_DISCOUNT_PERCENTAGE, "60%");
         values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "Ace Pap 1 KG");
         values.put(COLUMN_DISCOUNT_RETAILER_ID, 3); //Checkers is the third store that is loaded:
-        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.ace_pap));
+        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.ace_pap_compressed));
         db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
 
         values.clear(); //Clear the ContentValues object so that it can be reused:
@@ -254,7 +254,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         values.put(COLUMN_DISCOUNT_PERCENTAGE, "40%");
         values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "Brown Rice 1 KG");
         values.put(COLUMN_DISCOUNT_RETAILER_ID, 4); //Food Lover's Market is the fourth store that is loaded:
-        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.brownrice));
+        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.brownrice_compressed));
         db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
 
         values.clear(); //Clear the ContentValues object so that it can be reused:
@@ -262,7 +262,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         values.put(COLUMN_DISCOUNT_PERCENTAGE, "60%");
         values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "UTD Potatoes 1 KG");
         values.put(COLUMN_DISCOUNT_RETAILER_ID, 4); //Food Lover's Market is the fourth store that is loaded:
-        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.potatoes));
+        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.potatoes_compressed));
         db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
 
         values.clear(); //Clear the ContentValues object so that it can be reused:
@@ -270,7 +270,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         values.put(COLUMN_DISCOUNT_PERCENTAGE, "70%");
         values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "Strawberry Chocolate Cake");
         values.put(COLUMN_DISCOUNT_RETAILER_ID, 4); //Food Lover's Market is the fourth store that is loaded:
-        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.cake));
+        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.cake_compressed));
         db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
 
         values.clear(); //Clear the ContentValues object so that it can be reused:
@@ -278,7 +278,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         values.put(COLUMN_DISCOUNT_PERCENTAGE, "80%");
         values.put(COLUMN_DISCOUNT_PRODUCT_NAME, "Bread Rolls x6");
         values.put(COLUMN_DISCOUNT_RETAILER_ID, 4); //Food Lover's Market is the fourth store that is loaded:
-        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.rolls));
+        values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.rolls_compressed));
         db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
     }
 
