@@ -11,9 +11,12 @@
     <color name="hotPink">#FF007F</color>
     <color name="pink">#F8A3CD</color>
     <color name="lightGrey">#CDCDCD</color>
+    <color name="menuGrey">#777676</color>
     <color name="darkGrey">#4A4A4A</color>
     <color name="blue">#4361EE</color>
     <color name="menu_blue">#4895EF</color>
     <color name="baby_blue">#97C2F4</color>
     <color name="discount_red">#FF0000</color>
+    <color name="store_purple">#AB18C5</color>
+
 </resources>

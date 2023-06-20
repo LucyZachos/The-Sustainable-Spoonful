@@ -82,4 +82,20 @@
     <string name="Potatoes">UTD Potatoes 1 Kg</string>
     <string name="Cake">StrawChoc Cake</string>
     <string name="Rolls">Bread Rolls x6</string>
+
+    <!--20/06/2023: Strings for the physical store pages-->
+    <string name="PicknPay_Address_Label">Address: Van Riebeeck Avenue Greenstone</string>
+    <string name="Woolworths_Address_Label">Address: Bedford Square</string>
+    <string name="Checkers_Address_Label">Address: Meadowdale Mall</string>
+    <string name="FoodLovers_Address_Label">Address: North Reef road, Boksburg</string>
+
+    <!--20/06/2023: Paragraph -->
+    <string name="PicknPay_paragraph">Pick n Pay is a member of the international 10x20x30 initiative and is a founding member of
+    the Consumer Goods Council’s South African Voluntary Food Waste Initiative.</string>
+    <string name="Woolworths_paragraph">Woolworths wants to make it easier for students and people that are struggling.</string>
+    <string name="Checkers_paragraph">Checkers biggest efforts go into preventing food waste and losses before they occur.</string>
+    <string name="FoodLovers_paragraph">Food Lovers Market would love to reduce food waste with waste free shopping.</string>
+
+    <!--20/06/2023: Button-->
+    <string name="view_productsbtn">View Products</string>
 </resources>

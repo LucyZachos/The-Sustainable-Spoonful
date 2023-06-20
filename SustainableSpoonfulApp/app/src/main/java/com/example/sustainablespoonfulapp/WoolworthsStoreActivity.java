@@ -14,16 +14,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-public class PicknPayStoreActivity extends AppCompatActivity {
-
+public class WoolworthsStoreActivity extends AppCompatActivity {
     BottomNavigationView bottom_nav_bar;
-
-    Button logoutButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_picknpay_store_info); //Create the account page:
+        setContentView(R.layout.activity_woolworths_store_info); //Create the account page:
+
 
         bottom_nav_bar = findViewById(R.id.bottom_nav_bar);
         bottom_nav_bar.setSelectedItemId(R.id.home_bottom_navigation); //Set the home icon to selected when on this page:
@@ -38,11 +36,11 @@ public class PicknPayStoreActivity extends AppCompatActivity {
                         return true;
                     //If the search icon is clicked, go to the search discounts page:
                     case R.id.search_bottom_navigation:
-                        startActivity(new Intent(PicknPayStoreActivity.this,DiscountActivity.class)); //Redirect the customer to the search discount page:
+                        startActivity(new Intent(WoolworthsStoreActivity.this,DiscountActivity.class)); //Redirect the customer to the search discount page:
                         return true;
                     //If the account icon is clicked, go to the account page:
                     case R.id.account_bottom_navigation:
-                        startActivity(new Intent(PicknPayStoreActivity.this,AccountActivity.class)); //Redirect the customer to the account page:
+                        startActivity(new Intent(WoolworthsStoreActivity.this,AccountActivity.class)); //Redirect the customer to the account page:
                         return true;
                     default:
                         return false;

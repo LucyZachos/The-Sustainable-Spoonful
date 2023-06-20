@@ -5,42 +5,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/store_info_background"
-    tools:context=".PicknPayStoreActivity"
+    tools:context=".WoolworthsStoreActivity"
     >
 
-    <!--Heading: PicknPay-->
+    <!--Heading: Woolworths-->
     <TextView
-        android:id="@+id/picknpay_store_heading"
+        android:id="@+id/woolworths_store_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/picknpay_discount_heading"
+        android:text="@string/woolworths_discount_heading"
         android:textColor="@color/white"
         android:textSize="60sp"
         android:layout_marginTop="40sp"
-        android:layout_marginStart="60sp"
+        android:layout_marginStart="35sp"
         android:textAlignment="center"
         android:textStyle="bold"
         />
 
     <!--Image: Physical of the store-->
     <ImageView
-        android:id="@+id/picknpay_physical_store_image"
+        android:id="@+id/woolworths_physical_store_image"
         android:layout_width="wrap_content"
         android:layout_height="200sp"
-        android:src="@drawable/picknpay_physical_store"
+        android:src="@drawable/woolworths_store"
         android:layout_marginTop="160sp"
+        android:layout_marginStart="60sp"
         />
 
-    <!--Address: Greenstone Address-->
+    <!--Address: Bedford center Address-->
     <TextView
-        android:id="@+id/picknpay_address"
+        android:id="@+id/woolworths_address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/PicknPay_Address_Label"
+        android:text="@string/Woolworths_Address_Label"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:layout_marginTop="420sp"
-        android:layout_marginStart="20sp"
+        android:layout_marginStart="80sp"
         android:layout_marginEnd="20sp"
         android:textAlignment="center"
         android:textStyle="bold"
@@ -48,10 +49,10 @@
 
     <!--Paragraph: PicknPay-->
     <TextView
-        android:id="@+id/picknpay_paragraph"
+        android:id="@+id/woolworths_paragraph"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/PicknPay_paragraph"
+        android:text="@string/Woolworths_paragraph"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:layout_marginTop="500sp"

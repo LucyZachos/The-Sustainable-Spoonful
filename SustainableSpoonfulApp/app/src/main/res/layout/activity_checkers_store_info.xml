@@ -5,53 +5,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/store_info_background"
-    tools:context=".PicknPayStoreActivity"
+    tools:context=".CheckersProductsActivity"
     >
 
-    <!--Heading: PicknPay-->
+    <!--Heading: Checkers-->
     <TextView
-        android:id="@+id/picknpay_store_heading"
+        android:id="@+id/checkers_store_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/picknpay_discount_heading"
+        android:text="@string/checkers_discount_heading"
         android:textColor="@color/white"
         android:textSize="60sp"
         android:layout_marginTop="40sp"
-        android:layout_marginStart="60sp"
+        android:layout_marginStart="65sp"
         android:textAlignment="center"
         android:textStyle="bold"
         />
 
     <!--Image: Physical of the store-->
     <ImageView
-        android:id="@+id/picknpay_physical_store_image"
+        android:id="@+id/checkers_physical_store_image"
         android:layout_width="wrap_content"
         android:layout_height="200sp"
-        android:src="@drawable/picknpay_physical_store"
+        android:src="@drawable/checkers_store"
         android:layout_marginTop="160sp"
+
         />
 
-    <!--Address: Greenstone Address-->
+    <!--Address: Meadowdale Address-->
     <TextView
-        android:id="@+id/picknpay_address"
+        android:id="@+id/checkers_address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/PicknPay_Address_Label"
+        android:text="@string/Checkers_Address_Label"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:layout_marginTop="420sp"
-        android:layout_marginStart="20sp"
+        android:layout_marginStart="70sp"
         android:layout_marginEnd="20sp"
         android:textAlignment="center"
         android:textStyle="bold"
         />
 
-    <!--Paragraph: PicknPay-->
+    <!--Paragraph: Checkers-->
     <TextView
-        android:id="@+id/picknpay_paragraph"
+        android:id="@+id/checkers_paragraph"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/PicknPay_paragraph"
+        android:text="@string/Checkers_paragraph"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:layout_marginTop="500sp"
