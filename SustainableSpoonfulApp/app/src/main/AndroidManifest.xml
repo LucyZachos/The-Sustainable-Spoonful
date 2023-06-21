@@ -6,8 +6,8 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@drawable/logo_2"
+        android:label="The Sustainable Spoonful"
         android:supportsRtl="true"
         android:theme="@style/Theme.SustainableSpoonfulApp"
         tools:targetApi="31">
@@ -26,15 +26,11 @@
         <activity android:name=".LandingActivity"/> <!--Landing Page Activity-->
         <activity android:name=".DiscountActivity"/> <!--Discount Page Activity-->
         <activity android:name=".AccountActivity"/> <!--Account Page Activity-->
-        <activity android:name=".CheckersProductsActivity"/> <!--Checkers Page Activity-->
-        <activity android:name=".FoodLoversProductsActivity"/> <!--Food Lovers Activity-->
-        <activity android:name=".PicknPayProductsActivity"/> <!--PicknPay Activity-->
-        <activity android:name=".WoolworthsProductsActivity"/> <!--Woolworths Activity-->
         <activity android:name=".PicknPayStoreActivity"/> <!--About PicknPay Page:-->
         <activity android:name=".FoodLoversStoreActivity"/> <!--About Food Lovers Market Page:-->
         <activity android:name=".CheckersStoreActivity"/> <!--About Checkers Store Page:-->
         <activity android:name=".WoolworthsStoreActivity"/> <!--About Woolworths Page:-->
-        <activity android:name=".ProductViewActivity"/> <!--About Woolworths Page:-->
+        <activity android:name=".ProductViewActivity"/> <!--Product Page:-->
     </application>
 
 </manifest>
