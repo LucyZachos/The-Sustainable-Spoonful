@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--RecyclerView-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/discounted"
         android:layout_width="match_parent"

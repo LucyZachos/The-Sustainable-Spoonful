@@ -86,7 +86,7 @@ public class DiscountActivity extends AppCompatActivity {
         checkersTextView.setText(dbhelper.getDiscountedProductCount(checkersId));
         foodloversmarketTextView.setText(dbhelper.getDiscountedProductCount(foodloversID));
 
-        // Set click listeners for the card views
+        // Set click listeners for the card views:
         CardView cardView1 = findViewById(R.id.cardPicknpay);
         CardView cardView2 = findViewById(R.id.cardCheckers);
         CardView cardView3 = findViewById(R.id.cardWoolworths);
@@ -148,7 +148,7 @@ public class DiscountActivity extends AppCompatActivity {
     }
 
     private void startProductViewActivity(int retailerId) {
-        // Start the ProductViewActivity passing the retailer ID as an extra
+        // Start the ProductViewActivity passing the retailer ID as an extra:
         Intent intent = new Intent(DiscountActivity.this, ProductViewActivity.class);
         intent.putExtra("retailerId", retailerId);
         startActivity(intent);

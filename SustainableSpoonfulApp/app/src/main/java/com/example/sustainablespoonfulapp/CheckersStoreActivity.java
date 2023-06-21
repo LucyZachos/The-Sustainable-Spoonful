@@ -16,6 +16,7 @@ public class CheckersStoreActivity extends AppCompatActivity {
     BottomNavigationView bottom_nav_bar;
 
     Button viewProductsButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

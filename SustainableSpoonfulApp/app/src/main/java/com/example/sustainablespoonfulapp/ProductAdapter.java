@@ -25,12 +25,14 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     @NonNull
     @Override
     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        // Inflate the layout for each item in the RecycleView:
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.discounted_products, parent, false);
         return new ProductViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
+        //Bind the data to the views in the ViewHolder:
         DiscountedProduct product = productList.get(position);
         holder.bindData(product);
     }
@@ -48,7 +50,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
         public ProductViewHolder(View itemView) {
             super(itemView);
-
+            // Initialize the views in the ViewHolder:
             productImage = itemView.findViewById(R.id.discounted_product_image);
             productName = itemView.findViewById(R.id.discounted_product_name);
             productDiscountPercentage = itemView.findViewById(R.id.discounted_product_discount_percentage);
@@ -56,7 +58,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
         }
         public void bindData(DiscountedProduct product) {
-            // Set the data for each view
+            // Set the data for each view:
             Bitmap bitmap = BitmapFactory.decodeByteArray(product.getDiscountImage(), 0, product.getDiscountImage().length);
             productImage.setImageBitmap(bitmap);
             productName.setText(product.getProductName());

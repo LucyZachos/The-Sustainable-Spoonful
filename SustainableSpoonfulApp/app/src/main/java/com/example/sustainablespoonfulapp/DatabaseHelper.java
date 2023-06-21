@@ -332,8 +332,6 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         values.put(COLUMN_DISCOUNT_RETAILER_ID, 4); //Food Lover's Market is the fourth store that is loaded:
         values.put(COLUMN_DISCOUNT_IMAGE, convertImageToByteArray(R.drawable.rolls_compressed));
         db.insert(TABLE_NAME_DISCOUNTED_PRODUCTS, null, values);
-
-
     }
 
     @Override

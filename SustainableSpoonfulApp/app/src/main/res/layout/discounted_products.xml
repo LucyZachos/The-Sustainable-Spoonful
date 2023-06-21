@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <!--Cardview-->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,6 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <!--product Image-->
             <ImageView
                 android:id="@+id/discounted_product_image"
                 android:layout_width="100dp"
@@ -35,6 +37,7 @@
                 android:src="@drawable/apples"
                 />
 
+            <!--Product Name-->
             <TextView
                 android:id="@+id/discounted_product_name"
                 android:layout_width="wrap_content"
@@ -47,6 +50,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 />
 
+            <!--Discount Percentage-->
             <TextView
                 android:id="@+id/discounted_product_discount_percentage"
                 android:layout_width="wrap_content"
@@ -60,6 +64,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/discounted_product_name"
                 />
 
+            <!--Product Discount Code-->
             <TextView
                 android:id="@+id/discounted_product_discount_code"
                 android:layout_width="wrap_content"
