@@ -89,32 +89,54 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     }
 
     //Function to fetch the discounted products in the discounted products table based on the Retailer ID:
-    public List<DiscountedProduct> getDiscountedProductsByRetailerId(int retailerId){
+    public List<DiscountedProduct> getDiscountedProductsByRetailerId(int retailerId) {
         List<DiscountedProduct> discountedProducts = new ArrayList<>();
-        //Get a readable database:
         SQLiteDatabase database = getReadableDatabase();
-        String query = "SELECT * FROM " + TABLE_NAME_DISCOUNTED_PRODUCTS +
-                " WHERE " + COLUMN_DISCOUNT_RETAILER_ID + " = " + retailerId;
-        Cursor cursor = database.rawQuery(query,null);
-        int columnDiscountCode = cursor.getColumnIndex(COLUMN_DISCOUNT_CODE),
-                columnDiscountPercentage = cursor.getColumnIndex(COLUMN_DISCOUNT_PERCENTAGE),
-                columnProductName = cursor.getColumnIndex(COLUMN_DISCOUNT_PRODUCT_NAME),
-                columnDiscountImage = cursor.getColumnIndex(COLUMN_DISCOUNT_IMAGE);
 
-        if(cursor !=null && cursor.moveToFirst()){
-            do{
+        String[] columns = {
+                COLUMN_DISCOUNT_RETAILER_ID,
+                COLUMN_DISCOUNT_CODE,
+                COLUMN_DISCOUNT_PERCENTAGE,
+                COLUMN_DISCOUNT_PRODUCT_NAME,
+                COLUMN_DISCOUNT_IMAGE
+        };
+
+        String selection = COLUMN_DISCOUNT_RETAILER_ID + " = ?";
+        String[] selectionArgs = { String.valueOf(retailerId) };
+
+        Cursor cursor = database.query(
+                TABLE_NAME_DISCOUNTED_PRODUCTS,
+                columns,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null
+        );
+
+        int columnDiscountCode = cursor.getColumnIndex(COLUMN_DISCOUNT_CODE);
+        int columnDiscountPercentage = cursor.getColumnIndex(COLUMN_DISCOUNT_PERCENTAGE);
+        int columnProductName = cursor.getColumnIndex(COLUMN_DISCOUNT_PRODUCT_NAME);
+        int columnDiscountImage = cursor.getColumnIndex(COLUMN_DISCOUNT_IMAGE);
+
+        if (cursor != null && cursor.moveToFirst()) {
+            do {
                 String discountCode = cursor.getString(columnDiscountCode);
                 String discountPercentage = cursor.getString(columnDiscountPercentage);
                 String productName = cursor.getString(columnProductName);
                 byte[] discountImage = cursor.getBlob(columnDiscountImage);
 
-                DiscountedProduct discountedProduct = new DiscountedProduct(discountCode,discountPercentage,productName, discountImage);
+                DiscountedProduct discountedProduct = new DiscountedProduct(discountCode, discountPercentage, productName, discountImage);
                 discountedProducts.add(discountedProduct);
-            }while(cursor.moveToNext());
+            } while (cursor.moveToNext());
         }
+
         cursor.close();
+        database.close();
+
         return discountedProducts;
     }
+
 
     //Function to count the discounted products in the discounted products table based on the Retailer ID:
     public String getDiscountedProductCount(int retailerId){
