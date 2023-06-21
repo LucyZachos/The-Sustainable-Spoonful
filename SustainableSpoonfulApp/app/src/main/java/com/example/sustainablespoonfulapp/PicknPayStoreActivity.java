@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -18,12 +19,23 @@ public class PicknPayStoreActivity extends AppCompatActivity {
 
     BottomNavigationView bottom_nav_bar;
 
-    Button logoutButton;
+    Button viewProductsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_picknpay_store_info); //Create the account page:
+
+        viewProductsButton = findViewById(R.id.view_products_button);
+
+        //Redirects user to the Discounts page:
+        viewProductsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PicknPayStoreActivity.this, DiscountActivity.class);
+                startActivity(intent);
+            }
+        });
 
         bottom_nav_bar = findViewById(R.id.bottom_nav_bar);
         bottom_nav_bar.setSelectedItemId(R.id.home_bottom_navigation); //Set the home icon to selected when on this page:

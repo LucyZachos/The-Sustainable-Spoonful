@@ -3,6 +3,8 @@ package com.example.sustainablespoonfulapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,10 +15,22 @@ import com.google.android.material.navigation.NavigationBarView;
 public class CheckersStoreActivity extends AppCompatActivity {
     BottomNavigationView bottom_nav_bar;
 
+    Button viewProductsButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkers_store_info); //Create the account page:
+
+        viewProductsButton = findViewById(R.id.view_products_button);
+
+        //Redirects user to the Discounts page:
+        viewProductsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CheckersStoreActivity.this, DiscountActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         bottom_nav_bar = findViewById(R.id.bottom_nav_bar);

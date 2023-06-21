@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -17,10 +18,24 @@ import com.google.android.material.navigation.NavigationBarView;
 public class WoolworthsStoreActivity extends AppCompatActivity {
     BottomNavigationView bottom_nav_bar;
 
+    Button viewProductsButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_woolworths_store_info); //Create the account page:
+
+
+        viewProductsButton = findViewById(R.id.view_products_button);
+
+        //Redirects user to the Discounts page:
+        viewProductsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WoolworthsStoreActivity.this, DiscountActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         bottom_nav_bar = findViewById(R.id.bottom_nav_bar);
