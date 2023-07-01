@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -22,6 +23,8 @@ public class AccountActivity extends AppCompatActivity{
 
     BottomNavigationView bottom_nav_bar;
     Button logoutButton;
+
+    Button deleteButton;
 
     TextView nameTextView;
     TextView surnameTextView;
@@ -51,6 +54,8 @@ public class AccountActivity extends AppCompatActivity{
         nameTextView = findViewById(R.id.account_name_text);
         surnameTextView = findViewById(R.id.account_surname_text);
         emailTextView = findViewById(R.id.account_email_text);
+        deleteButton = findViewById(R.id.account_delete_button);
+
 
         bottom_nav_bar.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -75,6 +80,11 @@ public class AccountActivity extends AppCompatActivity{
                 }
             }
         });
+
+        //When the delete button is clicked, call the deleteCustomer() function:
+       deleteButton.setOnClickListener(v ->{
+           showDeleteAccountConfirmationBox();
+       });
 
         //When the logout button is clicked, call the showLogoutConfirmationBox() function:
         logoutButton.setOnClickListener(v -> {
@@ -145,6 +155,23 @@ public class AccountActivity extends AppCompatActivity{
                 .show();
     }
 
+    //Function to display a confirmation box to the customer asking if they want to delete their account:
+    private void showDeleteAccountConfirmationBox(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Delete Account") //Title of confirmation box:
+                .setMessage("Are you sure that you want to delete your account?") //Message in confirmation box:
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() { //Option 1: Customer clicks yes, call the deleteCustomer function:
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //Delete the customer's account and redirect to the Main page:
+                        deleteCustomerAndRedirectToMainPage();
+                    }
+                })
+                .setNegativeButton("No", null)  //Option 2: Customer clicks no:
+                .show();
+    }
+
+    //Function to log out the customer:
     private void logoutCustomer(){
         //Clear the customers' session:
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
@@ -161,5 +188,38 @@ public class AccountActivity extends AppCompatActivity{
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
         finish(); //Finishing the current activity so that customers' cannot go back to it when pressing the back button:
+    }
+
+    //Function to delete the customer's account and redirect them to the main page:
+    private void deleteCustomerAndRedirectToMainPage(){
+        //Delete the customer from the database:
+        String customerEmail = getCustomerEmailFromSharedPreferences(); //Get the customer email from SharedPreferences and store it:
+        DatabaseHelper databaseHelper = new DatabaseHelper(this); //Create a new instance of the DatabaseHelper class:
+        databaseHelper.deleteCustomer(customerEmail); //Call the deleteCustomer function and pass in the email from SharedPreferences:
+
+        //Clear the customer email from SharedPreferences:
+        clearCustomerEmailFromSharedPreferences();
+
+        //Display a message to the customer saying that their account has been deleted, then redirect to the main page:
+        Toast.makeText(AccountActivity.this, "Your account has been deleted.", Toast.LENGTH_SHORT).show();
+
+        //Redirect to the main page:
+        Intent intent= new Intent(AccountActivity.this, MainActivity.class); //Redirect the customer to the main page when opening the application:
+        startActivity(intent);
+        finish(); //Finishing the current activity so that customers' cannot go back to it when pressing the back button:
+    }
+
+    //Function to get the customer email from SharedPreferences:
+    private String getCustomerEmailFromSharedPreferences(){
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        return sharedPreferences.getString("email","");
+    }
+
+    //Function to clear the customer from SharedPreferences:
+    private void clearCustomerEmailFromSharedPreferences(){
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.remove("email"); //Remove email from SharedPreferences:
+        editor.apply(); //Save the changes to SharedPreferences:
     }
 }

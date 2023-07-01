@@ -373,4 +373,13 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     public String getColumnPassword(){
         return COLUMN_CUSTOMER_PASSWORD;
     }
+
+    //Function to delete a customer based on their email address:
+    public void deleteCustomer(String email){
+        SQLiteDatabase database = getWritableDatabase(); //Get a writable database:
+        String whereClause = COLUMN_CUSTOMER_EMAIL + " = ?";
+        String[] whereArgs = {email};
+        database.delete(TABLE_NAME_CUSTOMER, whereClause, whereArgs); //Delete from the customer table where the email is equal to the email in the session:
+        database.close(); //Close the database connection:
+    }
 }

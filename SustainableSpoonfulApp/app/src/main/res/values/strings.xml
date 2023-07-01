@@ -51,6 +51,9 @@
     <!--18/06/2023: Added string resources instead of using hardcoded strings for the Account page:-->
     <string name="account_logoutBtn">Logout</string>
     <string name="account_heading">Account</string>
+    <!--01/07/2023: Added additional string resources instead of using hardcoded strings for the Account page:-->
+    <string name="account_editBtn">Edit</string>
+    <string name="account_deleteBtn">Delete</string>
 
     <!--18/06/2023: Added string resources instead of using hardcoded strings for the Discounts Pick n Pay page:-->
     <string name="picknpay_discount_heading">Pick n Pay</string>

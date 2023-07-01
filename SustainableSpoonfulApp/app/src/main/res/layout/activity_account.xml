@@ -57,7 +57,33 @@
         android:gravity="center"
         />
 
+    <!--Button: edit button-->
+    <Button
+        android:id="@+id/account_edit_button"
+        android:layout_width="170sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90sp"
+        android:layout_marginTop="280sp"
+        android:backgroundTint="@color/menu_blue"
+        android:padding="15sp"
+        android:text="@string/account_editBtn"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        tools:ignore="TextSizeCheck" />
 
+    <!--Button: delete button-->
+    <Button
+        android:id="@+id/account_delete_button"
+        android:layout_width="170sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90sp"
+        android:layout_marginTop="380sp"
+        android:backgroundTint="@color/menu_blue"
+        android:padding="15sp"
+        android:text="@string/account_deleteBtn"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        tools:ignore="TextSizeCheck" />
 
     <!--Button: logout button-->
     <Button
@@ -65,7 +91,7 @@
         android:layout_width="170sp"
         android:layout_height="wrap_content"
         android:layout_marginStart="90sp"
-        android:layout_marginTop="470sp"
+        android:layout_marginTop="480sp"
         android:backgroundTint="@color/menu_blue"
         android:padding="15sp"
         android:text="@string/account_logoutBtn"

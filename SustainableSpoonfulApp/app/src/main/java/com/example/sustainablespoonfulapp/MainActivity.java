@@ -32,9 +32,13 @@ public class MainActivity extends AppCompatActivity {
 
         //If the customer is logged in, redirect to the home page:
         if(isLoggedIn) {
-            Intent intent = new Intent(MainActivity.this, LandingActivity.class);
-            startActivity(intent);
-            finish();
+            String email = sharedPreferences.getString("email","");
+            if(!email.isEmpty()){
+                Intent intent = new Intent(MainActivity.this, LandingActivity.class);
+                startActivity(intent);
+                finish();
+                return;
+            }
         }
 
         /*Navigating to the Registration Page After Clicking the Register Button*/
