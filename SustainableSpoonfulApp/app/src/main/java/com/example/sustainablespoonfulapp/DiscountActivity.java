@@ -96,28 +96,28 @@ public class DiscountActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startProductViewActivity(1);
-            }
+            } //Picknpay products:
         });
 
         cardView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startProductViewActivity(2);
-            }
+                startProductViewActivity(3);
+            } //Checkers products:
         });
 
         cardView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startProductViewActivity(3);
-            }
+                startProductViewActivity(2);
+            } //Woolworths products:
         });
 
         cardView4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startProductViewActivity(4);
-            }
+            } //Food lovers products:
         });
 
         bottom_nav_bar = findViewById(R.id.bottom_nav_bar);
