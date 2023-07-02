@@ -97,19 +97,4 @@
 
         android:backgroundTint="@color/white"
         android:padding="20sp"/>
-
-    <!--Forgot Password Label-->
-    <TextView
-        android:id="@+id/login_forgot_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/login_heading"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="450sp"
-        android:layout_marginTop="460sp"
-        android:layout_marginEnd="450sp"
-        android:layout_marginBottom="450sp"
-        android:text="@string/login_forgot_password_label"
-        android:textColor="@color/black"
-        android:textSize="20sp" />
 </RelativeLayout>
