@@ -23,8 +23,8 @@ public class AccountActivity extends AppCompatActivity{
 
     BottomNavigationView bottom_nav_bar;
     Button logoutButton;
-
     Button deleteButton;
+    Button editButton;
 
     TextView nameTextView;
     TextView surnameTextView;
@@ -55,6 +55,7 @@ public class AccountActivity extends AppCompatActivity{
         surnameTextView = findViewById(R.id.account_surname_text);
         emailTextView = findViewById(R.id.account_email_text);
         deleteButton = findViewById(R.id.account_delete_button);
+        editButton = findViewById(R.id.account_edit_button);
 
 
         bottom_nav_bar.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -82,9 +83,16 @@ public class AccountActivity extends AppCompatActivity{
         });
 
         //When the delete button is clicked, call the deleteCustomer() function:
-       deleteButton.setOnClickListener(v ->{
-           showDeleteAccountConfirmationBox();
-       });
+        deleteButton.setOnClickListener(v ->{
+            showDeleteAccountConfirmationBox();
+        });
+
+        //When the edit button is clicked, redirect to the edit account page:
+        editButton.setOnClickListener(v ->{
+            Intent intent= new Intent(AccountActivity.this, EditActivity.class); //Redirect the customer to the main page when opening the application:
+            startActivity(intent);
+            finish(); //Finishing the current activity so that customers' cannot go back to it when pressing the back button:
+        });
 
         //When the logout button is clicked, call the showLogoutConfirmationBox() function:
         logoutButton.setOnClickListener(v -> {

@@ -31,6 +31,7 @@
         <activity android:name=".CheckersStoreActivity"/> <!--About Checkers Store Page:-->
         <activity android:name=".WoolworthsStoreActivity"/> <!--About Woolworths Page:-->
         <activity android:name=".ProductViewActivity"/> <!--Product Page:-->
+        <activity android:name=".EditActivity"/> <!--Edit Activity:-->
     </application>
 
 </manifest>

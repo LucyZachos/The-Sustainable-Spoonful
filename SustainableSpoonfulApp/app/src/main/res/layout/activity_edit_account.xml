@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/plain_background"
+    tools:context=".EditActivity">
+
+    <!--Register Heading-->
+    <TextView
+        android:id="@+id/edit_account_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="50sp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50sp"
+        android:gravity="center"
+        android:text="@string/edit_label"
+        android:textColor="@color/black"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        tools:ignore="TextContrastCheck" />
+
+    <!--Name Label-->
+    <TextView
+        android:id="@+id/edit_account_name_heading"
+        android:layout_below="@+id/edit_account_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_label_name"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:padding="10sp"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="-20sp"
+        />
+
+    <!--Name Text Box-->
+    <EditText
+        android:id="@+id/edit_account_name_text"
+        android:layout_width="400sp"
+        android:layout_height="48sp"
+        android:layout_below="@+id/edit_account_name_heading"
+        android:layout_marginLeft="40sp"
+        android:layout_marginRight="40sp"
+        android:padding="10sp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        tools:ignore="Autofill,TextContrastCheck,TextFields"
+        android:background="@drawable/input_border"/>
+
+    <!--Surname Label-->
+    <TextView
+        android:id="@+id/edit_account_surname_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_account_name_text"
+        android:text="@string/edit_label_surname"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:padding="10sp"
+        android:layout_marginStart="40sp"/>
+
+    <!--Surname Text Box-->
+    <EditText
+        android:id="@+id/edit_account_surname_text"
+        android:layout_width="400sp"
+        android:layout_height="48sp"
+        android:layout_below="@+id/edit_account_surname_heading"
+        android:layout_marginLeft="40sp"
+        android:layout_marginRight="40sp"
+        android:padding="10sp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        tools:ignore="Autofill,TextContrastCheck,TextFields"
+        android:background="@drawable/input_border"/>
+
+    <!--Email Address Label-->
+    <TextView
+        android:id="@+id/edit_account_email_address_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_account_surname_text"
+        android:text="@string/edit_label_email"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:padding="10sp"
+        android:layout_marginStart="40sp"/>
+
+    <!--Email Address Text Box-->
+    <EditText
+        android:id="@+id/edit_account_email_address_text"
+        android:layout_width="400sp"
+        android:layout_height="48sp"
+        android:layout_below="@+id/edit_account_email_address_heading"
+        android:layout_marginLeft="40sp"
+        android:layout_marginRight="40sp"
+        android:padding="10sp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        tools:ignore="Autofill,TextContrastCheck,TextFields"
+        android:background="@drawable/input_border"/>
+
+    <!--Confirm Button-->
+    <Button
+        android:id="@+id/edit_account_confirm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_account_email_address_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginEnd="10sp"
+        android:layout_marginBottom="10sp"
+        android:backgroundTint="@color/menu_blue"
+        android:padding="20sp"
+        android:text="@string/edit_confirmBtn"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <!--Bottom Navigation Bar:-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_bar"
+        app:itemTextColor="@drawable/menu_bar_on_select"
+        app:itemIconTint="@drawable/menu_bar_on_select"
+        android:background="@drawable/menu_bar_shape"
+        android:layout_height="wrap_content"
+        tools:ignore="VisualLintBottomNav" />
+</RelativeLayout>
+

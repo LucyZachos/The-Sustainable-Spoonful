@@ -101,4 +101,11 @@
 
     <!--20/06/2023: Button-->
     <string name="view_productsbtn">View Products</string>
+
+    <!--01/07/2023: Added string resources instead of using hardcoded strings for the Edit Account page:-->
+    <string name="edit_label">Edit Account</string>
+    <string name="edit_label_name">Name</string>
+    <string name="edit_label_surname">Surname</string>
+    <string name="edit_label_email">Email Address</string>
+    <string name="edit_confirmBtn">Confirm</string>
 </resources>
