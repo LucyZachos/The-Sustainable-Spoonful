@@ -17,7 +17,7 @@ public class LandingActivity extends AppCompatActivity {
 
     BottomNavigationView bottom_nav_bar;
 
-    ImageButton landing_picknpay_button, landing_foodloversmarket_button, landing_checkers_button, landing_woolworths_button;
+    ImageButton landing_picknpay_button, landing_foodloversmarket_button, landing_checkers_button, landing_woolworths_button, landing_shoprite_button, landing_spar_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +54,8 @@ public class LandingActivity extends AppCompatActivity {
         landing_foodloversmarket_button = findViewById(R.id.landing_foodloversmarket_button);
         landing_checkers_button = findViewById(R.id.landing_checkers_button);
         landing_woolworths_button = findViewById(R.id.landing_woolworths_button);
+        landing_shoprite_button = findViewById(R.id.landing_shoprite_button);
+        landing_spar_button = findViewById(R.id.landing_spar_button);
 
         landing_picknpay_button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -80,6 +82,20 @@ public class LandingActivity extends AppCompatActivity {
             public void onClick(View v){
                 Intent intent = new Intent(LandingActivity.this,WoolworthsStoreActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        landing_shoprite_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(LandingActivity.this, "Details coming soon!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        landing_spar_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(LandingActivity.this, "Details coming soon!", Toast.LENGTH_SHORT).show();
             }
         });
     }
