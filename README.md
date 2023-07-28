@@ -1,4 +1,4 @@
-# The-Sustainable-Spoonful - A Food Saver Mobile Application
+# The Sustainable Spoonful - A Food Saver Mobile Application
 
 ITMDA (Mobile Applications and Web Services) Group 2
 
