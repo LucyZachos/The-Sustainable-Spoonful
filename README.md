@@ -1,6 +1,6 @@
 # The Sustainable Spoonful - A Food Saver Mobile Application
 
-ITMDA (Mobile Applications and Web Services) final year group project
+ITMDA (Mobile Applications and Web Services) final year group project.
 
 Group members:
 
