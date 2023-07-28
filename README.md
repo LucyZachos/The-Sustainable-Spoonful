@@ -1,6 +1,6 @@
 # The-Sustainable-Spoon
 
-ITMDA Group 2
+ITMDA (Mobile Applications and Web Services) Group 2
 
 Group members:
 
