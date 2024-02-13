@@ -1,8 +1,8 @@
-## The Sustainable Spoonful - A Food Saver Mobile Application
+## The Sustainable Spoonful - A Food Saver Mobile Application 🌱🥄
 
 ### Overview
 
-Welcome to The Sustainable Spoonful, an innovative mobile application developed as a final-year group project for the ITMDA course (Mobile Applications and Web Services). Our team has crafted this platform with a mission to reduce food waste while providing affordable options for consumers and sustainable solutions for businesses.
+Welcome to The Sustainable Spoonful, an innovative mobile application developed as a final-year group project for the ITMDA course (Mobile Applications and Web Services). Our team has crafted this platform with a mission to reduce food waste while providing affordable options for consumers and sustainable solutions for businesses. 📱🌍
 
 ### Group Members
 
@@ -21,17 +21,17 @@ Welcome to The Sustainable Spoonful, an innovative mobile application developed 
 #### For Stores:
 - Reduce food waste by selling unsold or near-expiry products.
 - Increase revenue by attracting budget-conscious consumers.
-- Cultivate customer loyalty through special offers and discounts.
+- Cultivate customer loyalty through special offers and discounts. 💸🛒
 
 #### For Consumers:
 - Save money on groceries and everyday items.
 - Access fresh products at discounted prices.
-- Play a part in sustainability efforts by supporting a reduction in food waste.
+- Play a part in sustainability efforts by supporting a reduction in food waste. 🌿♻️
 
 ### App Demo
 
 [Click here to view a demo of our app.](https://github.com/LucyZachos/The-Sustainable-Spoonful/assets/90052665/d26be4fa-651e-4e42-9c72-dc8fadebc318)
 
-Please note that this project was created for academic purposes and is not hosted on the Google Play Store.
+### IDE Used: Android Studio
 
-Thank you for exploring The Sustainable Spoonful. We hope our app inspires you to make sustainable choices while saving money and contributing to a greener future.
+Feel free to reach out with any questions or feedback! 📧
